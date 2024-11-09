@@ -46,7 +46,7 @@ fi
 setopt extendedglob             # Extended globbing. Allows using regular expressions with *
 setopt nocaseglob               # Case insensitive globbing
 setopt rcexpandparam            # Array expension with parameters
-setopt nocheckjobs              # Don't warn about running processes when exiting
+#setopt nocheckjobs              # Don't warn about running processes when exiting
 setopt numericglobsort          # Sort filenames numerically when it makes sense
 # setopt nobeep                   # No beep
 setopt appendhistory            # Immediately append history instead of overwriting
@@ -72,6 +72,8 @@ setopt HIST_BEEP
 
 setopt incappendhistorytime
 
+
+ bindkey -e $HOME/.zshrc
 # Completion
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|[._-]=* r:|=*' 'l:|=* r:|=*'      # Case insensitive tab completion
 zstyle ':completion:*' rehash true                              # automatically find new executables in path
@@ -123,7 +125,7 @@ export NODE_PATH="$HOME/.nvm/versions/node/v16.14.2/lib/node_modules/"
 
 # aliases
 if [ -f ~/.aliases ]; then
-. ~/.aliases
+    source ~/.aliases
 fi
 
 
