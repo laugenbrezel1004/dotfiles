@@ -145,16 +145,18 @@
 /* Workspaces */
 #workspaces{
     border-radius: 100%;
-    color: @text;
+color: @text;
+padding-left: 8px;
+padding-right: 8px;
 }
 
 #workspaces button {
-    border-radius: 10px;
-    background-color: @mauve;
+border-radius: 10px;
+background-color: @mauve;
 }
 
 #workspaces button.active {
-    background-color: #64727D;
+background-color: #64727D;
     border-radius: 10px;
 }
 /* =============================== */
