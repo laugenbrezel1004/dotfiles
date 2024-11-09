@@ -1,6 +1,6 @@
 # neofetch --source ~/.config/ascii.txt --backend ascii
 # pokemon-colorscripts -r -s --no-title
-
+neofetch
 # Different terminal theme for VSCode and rest
 if [ "$TERM_PROGRAM" = "vscode" ]; then
   eval "$(starship init zsh --print-full-init)"
