@@ -1,0 +1,192 @@
+{
+    "layer": "top", // Waybar at top layer
+    "position": "top", // Waybar position (top|bottom|left|right)
+    //"gtk-layer-shell": "false",
+    "height": 46, // Waybar height (to be removed for auto height)
+    // "width": 2560, // Waybar width
+    "spacing": 0, // Gaps between modules (0px) Adjusted in the css
+    "margin-top": 0,
+    //"margin-bottom":-10,
+    "margin-left": 10,
+    "margin-right": 10,
+    // Choose the order of the modules
+    "modules-left": [
+        "custom/launcher",
+        "hyprland/workspaces"
+    ],
+    "modules-center": [
+    "custom/music",
+    ],
+    "modules-right": [
+        //"network",
+        "cpu",
+        "memory",
+        "temperature",
+        "disk",
+        "pulseaudio",
+        "custom/notifications",
+        "tray",
+        "clock"
+    ],
+  "custom/launcher":{
+      "format": "{}",
+      "tooltip": true,
+      "exec": "echo '{\"text\":\"\",\"tooltip\":\"Drun | Run\"}'",
+      "return-type": "json",
+      "on-click": "pkill wofi || wofi --show drun -n",
+      "on-click-right": "pkill wofi || wofi --show run -n",
+  },
+
+  "hyprland/workspaces": { 
+    "one-click": "activate", 
+    "active-only": false,
+    "all-outputs": true,
+    "format": "{icon} {windows}",
+    "window-rewrite-default": "",
+        
+ "window-rewrite": {
+        "class<discord>": " ",
+        "class<google-chrome>": "",
+        "class<foot>": "",
+        "class<steam>": " ",
+        "class<spotify>": "",
+        "class<keepassxc>": " ",
+ },
+
+
+ },
+    "cpu": {
+        "format": " {usage}%",
+        "tooltip": true,
+        "on-click": "kitty --start-as=fullscreen --title all_is_kitty sh -c 'btop'",
+        "interval": 2
+    },
+    "memory": {
+        "format": " {}%",
+        "tooltip": true,
+        "on-click": "kitty --start-as=fullscreen --title all_is_kitty sh -c 'btop'",
+        "interval": 2
+    },
+    "temperature": {
+         "thermal-zone": 1,
+        "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+        "critical-threshold": 40,
+        "format-critical": "{icon} {temperatureC}°C",
+        "format": "{icon} {temperatureC}°C",
+        "format-icons": [
+            "",
+            "",
+            ""
+        ],
+        "tooltip": true,
+        "on-click": "kitty --start-as=fullscreen --title all_is_kitty sh -c 'btop'",
+        "interval": 1
+    },
+    "disk": {
+        "format": " {percentage_used}% ({free})",
+        "tooltip": true,
+        "on-click": "kitty --start-as=fullscreen --title all_is_kitty sh -c 'btop'",
+        "interval": 2
+    },
+     "custom/music": {
+        "format": "{icon}{0}",
+        "format-icons": {
+            "Playing": " ", // Uncomment if not using the dynamic script
+            "Paused": " ",
+            "Stopped": "&#x202d;ﭥ " // This stop symbol is RTL. So &#x202d; is left-to-right override.
+        },
+        "escape": true,
+        "tooltip": true,
+        "exec": "~/.scripts/caway -b 10 -e",
+        "return-type": "json",
+        "on-click": "playerctl play-pause",
+        "on-scroll-up": "playerctl previous",
+        "on-scroll-down": "playerctl next",
+        "on-click-right": "amberol",
+        "max-length": 50 
+    },
+    "hyprland/window": {
+        "format": "{}",
+        "separate-outputs": true,
+        "max-length": 35
+    },
+    "network": {
+        "interface": "enp9s0", // (Optional) To force the use of this interface
+        "format-disconnected": "{icon} No Internet",//when interface is disconnected
+        "format-linked": " {ifname} (No IP)",//when interface has no ip
+        "format-ethernet": "{icon} Up:{bandwidthUpBytes} Down:{bandwidthDownBytes}",// when connected via ethernet
+        "format-disconnected": "{icon} Disconnected",//when interface is disconnected
+        "format-icons": {
+            "ethernet": "",
+            "disconnected": "⚠"
+        },
+        "interval": 2 
+    },
+    "pulseaudio": {
+        // "scroll-step": 1, // %, can be a float
+        "format": "{icon} {volume}%", // {format_source}
+        "format-bluetooth": " {volume}%", // {format_source}
+        "format-bluetooth-muted": "", // {format_source}
+        "format-muted": "", // {format_source}
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "headset": "",
+            "default": [
+                "",
+                "",
+                ""
+            ]
+        },
+        "on-click": "pavucontrol"
+    },
+        "custom/notifications": {
+        "tooltip": false,
+        "format": "{icon}",
+        "format-icons": {
+            "notification": "<span foreground='red'><sup></sup></span>",
+            "none": "",
+            "dnd-notification": "<span foreground='red'><sup></sup></span>",
+            "dnd-none": ""
+        },
+        "return-type": "json",
+        "exec-if": "which swaync-client",
+        "exec": "swaync-client -swb",
+        "on-click": "sleep 0.15 && swaync-client -t -sw",
+        "on-click-right": "sleep 0.15 && swaync-client -d -sw",
+        "escape": true
+    },
+    "tray": {
+        "icon-size": 16,
+        "spacing": 16
+    },
+
+    "clock": {
+        "format": "{:%H:%M}  ",
+        "format-alt": "{:%A, %B %d, %Y (%R)}  ",
+        "tooltip-format": "<tt><big>{calendar}</big></tt>",
+        "calendar": {
+                    "mode"          : "month",
+                    "mode-mon-col"  : 3,
+                    "weeks-pos"     : "right",
+                    "on-scroll"     : 1,
+                    "format": {
+                              "months":     "<span color='#ffead3'><b>{}</b></span>",
+                              "days":       "<span color='#ecc6d9'><b>{}</b></span>",
+                              "weeks":      "<span color='#99ffdd'><b>W{}</b></span>",
+                              "weekdays":   "<span color='#ffcc66'><b>{}</b></span>",
+                              "today":      "<span color='#ff6699'><b><u>{}</u></b></span>"
+                              }
+                    },
+        "actions":  {
+                    "on-click-right": "mode",
+                    "on-scroll-up": "tz_up",
+                    "on-scroll-down": "tz_down",
+                    "on-scroll-up": "shift_up",
+                    "on-scroll-down": "shift_down"
+                    }
+    },
+
+
+    }

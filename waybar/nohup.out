@@ -1,0 +1,118 @@
+[2024-11-07 15:12:39.110] [info] Using configuration file /home/laurenz/.config/waybar/config.jsonc
+[2024-11-07 15:12:39.111] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-11-07 15:12:39.111] [info] Using CSS file /home/laurenz/.config/waybar/style.css
+[2024-11-07 15:12:39.122] [info] Hyprland IPC starting
+[2024-11-07 15:12:39.123] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-11-07 15:12:39.153] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-11-07 15:12:39.161] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-11-07 15:12:39.496] [info] Bar configured (width: 3420, height: 46) for output: DP-1
+[2024-11-07 15:12:39.497] [info] Bar configured (width: 2540, height: 46) for output: DP-2
+[2024-11-07 15:12:39.497] [info] Bar configured (width: 1060, height: 46) for output: HDMI-A-1
+[2024-11-07 15:13:38.322] [info] Using configuration file /home/laurenz/.config/waybar/config.jsonc
+[2024-11-07 15:13:38.323] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-11-07 15:13:38.323] [info] Using CSS file /home/laurenz/.config/waybar/style.css
+[2024-11-07 15:13:38.329] [info] Hyprland IPC starting
+[2024-11-07 15:13:38.330] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-11-07 15:13:38.354] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-11-07 15:13:38.360] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-11-07 15:13:38.692] [info] Bar configured (width: 3420, height: 46) for output: DP-1
+[2024-11-07 15:13:38.692] [info] Bar configured (width: 2540, height: 46) for output: DP-2
+[2024-11-07 15:13:38.692] [info] Bar configured (width: 1060, height: 46) for output: HDMI-A-1
+[2024-11-07 15:17:04.549] [info] Using configuration file /home/laurenz/.config/waybar/config.jsonc
+[2024-11-07 15:17:04.552] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-11-07 15:17:04.552] [info] Using CSS file /home/laurenz/.config/waybar/style.css
+[2024-11-07 15:17:04.565] [info] Hyprland IPC starting
+[2024-11-07 15:17:04.566] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-11-07 15:17:04.595] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-11-07 15:17:04.602] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-11-07 15:17:04.946] [info] Bar configured (width: 3420, height: 46) for output: DP-1
+[2024-11-07 15:17:04.947] [info] Bar configured (width: 2540, height: 46) for output: DP-2
+[2024-11-07 15:17:04.947] [info] Bar configured (width: 1060, height: 46) for output: HDMI-A-1
+[2024-11-07 15:17:38.591] [info] Using configuration file /home/laurenz/.config/waybar/config.jsonc
+[2024-11-07 15:17:38.592] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-11-07 15:17:38.592] [info] Using CSS file /home/laurenz/.config/waybar/style.css
+[2024-11-07 15:17:38.604] [info] Hyprland IPC starting
+[2024-11-07 15:17:38.606] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-11-07 15:17:38.636] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-11-07 15:17:38.647] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-11-07 15:17:38.992] [info] Bar configured (width: 3420, height: 46) for output: DP-1
+[2024-11-07 15:17:38.992] [info] Bar configured (width: 2540, height: 46) for output: DP-2
+[2024-11-07 15:17:38.992] [info] Bar configured (width: 1060, height: 46) for output: HDMI-A-1
+/home/laurenz/.scripts/caway: line 1: warning: run_pending_traps: bad value in trap_list[15]: (nil)
+/home/laurenz/.scripts/caway: line 1: warning: run_pending_traps: bad value in trap_list[15]: (nil)
+/home/laurenz/.scripts/caway: line 1: warning: run_pending_traps: signal handler is SIG_DFL, resending 15 (SIGTERM) to myself
+/home/laurenz/.scripts/caway: line 1: warning: run_pending_traps: signal handler is SIG_DFL, resending 15 (SIGTERM) to myself
+[2024-11-07 15:18:00.363] [info] Using configuration file /home/laurenz/.config/waybar/config.jsonc
+[2024-11-07 15:18:00.365] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-11-07 15:18:00.365] [info] Using CSS file /home/laurenz/.config/waybar/style.css
+[2024-11-07 15:18:00.371] [info] Hyprland IPC starting
+[2024-11-07 15:18:00.373] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-11-07 15:18:00.403] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-11-07 15:18:00.409] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-11-07 15:18:00.755] [info] Bar configured (width: 3420, height: 46) for output: DP-1
+[2024-11-07 15:18:00.755] [info] Bar configured (width: 2540, height: 46) for output: DP-2
+[2024-11-07 15:18:00.755] [info] Bar configured (width: 1060, height: 46) for output: HDMI-A-1
+[2024-11-07 15:18:07.354] [info] Using configuration file /home/laurenz/.config/waybar/config.jsonc
+[2024-11-07 15:18:07.355] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-11-07 15:18:07.355] [info] Using CSS file /home/laurenz/.config/waybar/style.css
+[2024-11-07 15:18:07.368] [info] Hyprland IPC starting
+[2024-11-07 15:18:07.370] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-11-07 15:18:07.402] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-11-07 15:18:07.410] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-11-07 15:18:07.784] [info] Bar configured (width: 3420, height: 46) for output: DP-1
+[2024-11-07 15:18:07.784] [info] Bar configured (width: 2540, height: 46) for output: DP-2
+[2024-11-07 15:18:07.784] [info] Bar configured (width: 1060, height: 46) for output: HDMI-A-1
+/home/laurenz/.scripts/caway: line 1: warning: run_pending_traps: bad value in trap_list[15]: (nil)
+/home/laurenz/.scripts/caway: line 1: warning: run_pending_traps: bad value in trap_list[15]: (nil)
+/home/laurenz/.scripts/caway: line 1: warning: run_pending_traps: signal handler is SIG_DFL, resending 15 (SIGTERM) to myself
+/home/laurenz/.scripts/caway: line 1: warning: run_pending_traps: signal handler is SIG_DFL, resending 15 (SIGTERM) to myself
+[2024-11-07 15:22:51.338] [info] Using configuration file /home/laurenz/.config/waybar/config.jsonc
+[2024-11-07 15:22:51.339] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-11-07 15:22:51.339] [info] Using CSS file /home/laurenz/.config/waybar/style.css
+[2024-11-07 15:22:51.346] [info] Hyprland IPC starting
+[2024-11-07 15:22:51.347] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-11-07 15:22:51.376] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-11-07 15:22:51.382] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-11-07 15:22:51.727] [info] Bar configured (width: 3420, height: 46) for output: DP-1
+[2024-11-07 15:22:51.727] [info] Bar configured (width: 2540, height: 46) for output: DP-2
+[2024-11-07 15:22:51.727] [info] Bar configured (width: 1060, height: 46) for output: HDMI-A-1
+[2024-11-07 15:24:34.241] [info] Using configuration file /home/laurenz/.config/waybar/config.jsonc
+[2024-11-07 15:24:34.242] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-11-07 15:24:34.242] [info] Using CSS file /home/laurenz/.config/waybar/style.css
+[2024-11-07 15:24:34.251] [info] Hyprland IPC starting
+[2024-11-07 15:24:34.253] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-11-07 15:24:34.282] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-11-07 15:24:34.300] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-11-07 15:24:34.644] [info] Bar configured (width: 3420, height: 46) for output: DP-1
+[2024-11-07 15:24:34.645] [info] Bar configured (width: 2540, height: 46) for output: DP-2
+[2024-11-07 15:24:34.645] [info] Bar configured (width: 1060, height: 46) for output: HDMI-A-1
+[2024-11-07 15:24:54.161] [info] Using configuration file /home/laurenz/.config/waybar/config.jsonc
+[2024-11-07 15:24:54.162] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-11-07 15:24:54.162] [info] Using CSS file /home/laurenz/.config/waybar/style.css
+[2024-11-07 15:24:54.173] [info] Hyprland IPC starting
+[2024-11-07 15:24:54.175] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-11-07 15:24:54.197] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-11-07 15:24:54.208] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-11-07 15:24:54.542] [info] Bar configured (width: 3420, height: 46) for output: DP-1
+[2024-11-07 15:24:54.543] [info] Bar configured (width: 2540, height: 46) for output: DP-2
+[2024-11-07 15:24:54.543] [info] Bar configured (width: 1060, height: 46) for output: HDMI-A-1
+[2024-11-07 15:27:37.104] [info] Using configuration file /home/laurenz/.config/waybar/config.jsonc
+[2024-11-07 15:27:37.106] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-11-07 15:27:37.106] [info] Using CSS file /home/laurenz/.config/waybar/style.css
+[2024-11-07 15:27:37.112] [info] Hyprland IPC starting
+[2024-11-07 15:27:37.113] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-11-07 15:27:37.135] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-11-07 15:27:37.139] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-11-07 15:27:37.458] [info] Bar configured (width: 3420, height: 46) for output: DP-1
+[2024-11-07 15:27:37.458] [info] Bar configured (width: 2540, height: 46) for output: DP-2
+[2024-11-07 15:27:37.458] [info] Bar configured (width: 1060, height: 46) for output: HDMI-A-1
+[2024-11-07 15:29:32.557] [info] Using configuration file /home/laurenz/.config/waybar/config.jsonc
+[2024-11-07 15:29:32.558] [info] Unable to receive desktop appearance: GDBus.Error:org.freedesktop.DBus.Error.UnknownMethod: No such interface “org.freedesktop.portal.Settings” on object at path /org/freedesktop/portal/desktop
+[2024-11-07 15:29:32.558] [info] Using CSS file /home/laurenz/.config/waybar/style.css
+[2024-11-07 15:29:32.574] [info] Hyprland IPC starting
+[2024-11-07 15:29:32.575] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-11-07 15:29:32.602] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-11-07 15:29:32.610] [info] Loading persistent workspaces from Hyprland workspace rules
+[2024-11-07 15:29:32.940] [info] Bar configured (width: 3420, height: 46) for output: DP-1
+[2024-11-07 15:29:32.940] [info] Bar configured (width: 2540, height: 46) for output: DP-2
+[2024-11-07 15:29:32.940] [info] Bar configured (width: 1060, height: 46) for output: HDMI-A-1
