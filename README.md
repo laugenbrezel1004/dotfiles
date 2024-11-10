@@ -19,7 +19,7 @@ Arch:   coming soon
 
 # Some pictures
 ## Hyprland
-![2024-11-10-085728_hyprshot](https://github.com/user-attachments/assets/89de6399-426e-4d7b-900b-e267e7f7c8cc)
+![2024-11-10-090631_hyprshot](https://github.com/user-attachments/assets/52ae2e1b-393e-4a70-995f-7eebf0085c98)
 
 ## Waybar
 ![2024-11-10-090247_hyprshot](https://github.com/user-attachments/assets/97c045df-788f-4a93-81b1-fe8552ca7967)
