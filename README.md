@@ -18,14 +18,8 @@ Gentoo: coming soon
 Arch:   coming soon
 
 # Some pictures
-## Hyprland
-![2024-11-10-085728_hyprshot](https://github.com/user-attachments/assets/89de6399-426e-4d7b-900b-e267e7f7c8cc)
-
-## Waybar
-![2024-11-10-090247_hyprshot](https://github.com/user-attachments/assets/97c045df-788f-4a93-81b1-fe8552ca7967)
-
-## Neofetch
-![2024-11-10-090345_hyprshot](https://github.com/user-attachments/assets/2935f1d4-3d10-42f2-a17d-0b697e8dc3a2)
+## Hyprland / Neofetch / Foot / Waybar
+![2024-11-10-090631_hyprshot](https://github.com/user-attachments/assets/52ae2e1b-393e-4a70-995f-7eebf0085c98)
 
 ## Bat
 ![2024-11-10-090418_hyprshot](https://github.com/user-attachments/assets/ecc08c1e-a8be-491f-b8a7-2ccec1921f1b)
