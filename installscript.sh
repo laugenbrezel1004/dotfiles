@@ -9,7 +9,7 @@ set -e
 os=""
 setupFor=""
 installer=""
-installSoftware=("bat" "btop" "foot" "kitty" "lsd" "neofetch" "git" "vim" "ranger" "tmux" "zsh" "cava")
+installSoftware=("bat" "btop" "foot" "kitty" "lsd" "neofetch" "git" "neovim" "vim" "ranger" "tmux" "zsh" "cava")
 installHyprlandSoftware=("mpv" "pulse" "swaync" "waybar" "wofi")
 installHyprland=false
 # Get the OS 
@@ -103,9 +103,9 @@ _pullGitrepository(){
     fi
     git clone https://github.com/laugenbrezel1004/dotfiles.git
     echo "Overwriting existing configfiles"
-	sudo  rm -rf /home/$USER/.config/{bat,btop,cava,foot,kitty,lsd,neofetch,vim,ranger}
+	sudo  rm -rf /home/$USER/.config/{bat,btop,cava,foot,kitty,lsd,neofetch,nvim,vim,ranger}
 	sudo  rm -rf /home/$USER/{.aliases,.tmux.conf,.vimrc,.zshrc}
-	sudo  mv -f dotfiles/{bat,btop,cava,foot,kitty,lsd,neofetch,ranger} /home/$USER/.config/
+	sudo  mv -f dotfiles/{bat,btop,cava,foot,kitty,lsd,neofetch,ranger,nvim} /home/$USER/.config/
 	sudo  mv -f dotfiles/{.aliases,.tmux.conf,.vimrc,.zshrc} /home/$USER/
 	echo 
     echo "You are all set!!!"
