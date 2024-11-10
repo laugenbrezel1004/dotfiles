@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 #TODO
+# install not everything with root in the users home dir xD.
 #zsh plugin, nvim plugin
 # Abort at error
 set -e
@@ -73,18 +74,18 @@ _installsoftware(){
     if [ "$os" = "gentoo" ]; then
         echo "Updating portage repository"
         sleep 3
-        emerge --sync
+        sudo emerge --sync
         for i in "${installSoftware[@]}"; do
-            emerge "$i"
+            sudo emerge "$i"
         done 
     fi
 
     if [ "$os" = "debian" ] || [ "$os" = "ubuntu" ]; then
         echo "Updating apt repository"
         sleep 3
-        apt update -y
+        sudo apt update -y
         for i in "${installSoftware[@]}"; do
-            apt install -y "$i"
+            sudo apt install -y "$i"
         done
         echo "Finished installing software"
     fi
@@ -112,14 +113,14 @@ _pullGitrepository(){
     }
 
 main() {
-    currentUser=$(whoami)
-    if [ "$currentUser" != "root" ]; then
-        echo "You are not root, please execute the script as root"
-        echo "Aborting!!!"
-        exit 1
-    fi
-
-    echo "Starting the installer..."
+#    currentUser=$(whoami)
+#    if [ "$currentUser" != "root" ]; then
+#        echo "You are not root, please execute the script as root"
+#        echo "Aborting!!!"
+#        exit 1
+#    fi
+#
+#    echo "Starting the installer..."
     sleep 5
     echo "Identifying OS..."
     _identify_os  # Call the function to identify OS
