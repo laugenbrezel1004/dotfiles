@@ -8,7 +8,7 @@ set -e
 os=""
 setupFor=""
 installer=""
-installSoftware=("bat" "btop" "foot" "kitty" "lsd" "neofetch" "git" "vim" "ranger" "tmux" "zsh" "starship" "cava")
+installSoftware=("bat" "btop" "foot" "kitty" "lsd" "neofetch" "git" "vim" "ranger" "tmux" "zsh" "cava")
 installHyprlandSoftware=("mpv" "pulse" "swaync" "waybar" "wofi")
 installHyprland=false
 # Get the OS 
@@ -18,11 +18,12 @@ _identify_os() {
         os="gentoo"
         installer="emerge"
         echo "Found $os as OS and $installer as packagemanager"
-
+        return
     elif grep -qi gentoo /etc/os-release; then
         os="gentoo"
         installer="emerge"
         echo "Found $os as OS and $installer as packagemanager"
+        return
     fi
 
     # Check for Arch
@@ -30,10 +31,12 @@ _identify_os() {
         os="arch"
         installer="pacman"
         echo "Found $os as OS and $installer as packagemanager"
+        return
     elif grep -qi arch /etc/os-release; then
         os="arch"
         installer="pacman"
-         echo "Found $os as OS and $installer as packagemanager"
+        echo "Found $os as OS and $installer as packagemanager"
+        return 
     fi
 
     # Check for Ubuntu 
@@ -41,10 +44,12 @@ _identify_os() {
         os="ubuntu"
         installer="apt"
         echo "Found $os as OS and $installer as packagemanager"
+        return
     elif grep -qi ubuntu /etc/os-release; then
         os="ubuntu"
         installer="apt"
         echo "Found $os as OS and $installer as packagemanager"
+        return
     fi
 
     # Check for Debian 
@@ -52,10 +57,12 @@ _identify_os() {
         os="debian"
         installer="apt"
         echo "Found $os as OS and $installer as packagemanager"
+        return
     elif grep -qi debian /etc/os-release; then
         os="debian"
         installer="apt"
         echo "Found $os as OS and $installer as packagemanager"
+        return
     fi
 }
 
@@ -81,6 +88,10 @@ _installsoftware(){
         done
         echo "Finished installing software"
     fi
+
+    echo "Installing starship..."
+    sleep 3
+    curl -sS https://starship.rs/install.sh | sh
 }
 
 _pullGitrepository(){
