@@ -124,9 +124,9 @@ main() {
     sleep 5
     echo "Identifying OS..."
     _identify_os  # Call the function to identify OS
-    echo "Please enter the name of the user who should receive the configfiles"
-    read -r setupFor
-    while true; do
+#    echo "Please enter the name of the user who should receive the configfiles"
+#    read -r setupFor
+#    while true; do
         read -rp "Do you also want to install hyprland? (yes/no) " yn
         case $yn in
             [Yy]* ) 
