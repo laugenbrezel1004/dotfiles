@@ -67,19 +67,19 @@ _installsoftware(){
         echo "Updating portage repository"
         sleep 3
         emerge --sync
-        for i in "$installSoftware[@]"; do
-            emerge $i
+        for i in "${installSoftware[@]}"; do
+            emerge "$i"
         done 
     fi
 
-    if [ "$os" = "debian" || "$os" = "ubuntu" ]; then
+    if [ "$os" = "debian" ] || [ "$os" = "ubuntu" ]; then
         echo "Updating apt repository"
         sleep 3
         apt update -y
-        for i in "$installSoftware[@]"; do
-            apt install $i
+        for i in "${installSoftware[@]}"; do
+            apt install -y "$i"
         done
-        ecoh "Finished installing software"
+        echo "Finished installing software"
     fi
 }
 
@@ -87,14 +87,16 @@ _pullGitrepository(){
     echo "Pulling down the git repository"
     cd /tmp
     git clone https://github.com/laugenbrezel1004/dotfiles.git
-    mv bat btop cava foot kitty lsd neofetch nvim starship.toml ranger $setupFor/.config
-    mv .aliases .tmux.conf .vimrc .zshrc $setupFor
+    mv dotfiles/{bat,btop,cava,foot,kitty,lsd,neofetch,nvim,starship.toml,ranger} "/home/$setupFor/.config/"
+    mv dotfiles/{.aliases,.tmux.conf,.vimrc,.zshrc} "/home/$setupFor/"
+    rm -rf dotfiles
 }
+
 main() {
     currentUser=$(whoami)
     if [ "$currentUser" != "root" ]; then
         echo "You are not root, please execute the script as root"
-        echo "Abording!!!"
+        echo "Aborting!!!"
         exit 1
     fi
 
@@ -102,9 +104,9 @@ main() {
     sleep 5
     echo "Identifying OS..."
     echo "Please enter the name of the user who should receive the configfiles"
-    read setupFor
+    read -r setupFor
     while true; do
-        read -p "Do you also want to install hyprland? (yes/no) " yn
+        read -rp "Do you also want to install hyprland? (yes/no) " yn
         case $yn in
             [Yy]* ) 
                 echo "You answered yes. Proceeding..."
@@ -121,7 +123,6 @@ main() {
         esac
     done
 
-
     _identify_os  # Call the function to identify OS
     _installsoftware #install the needed software 
     _pullGitrepository # download the git repo
@@ -130,8 +131,6 @@ main() {
         echo "Unable to find OS type, aborting the script!!!"
         exit 1  # Exit with a non-zero status code to indicate failure
     fi
-    
 }
 
 main  # Call main function
-
