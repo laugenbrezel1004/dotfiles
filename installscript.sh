@@ -103,10 +103,10 @@ _pullGitrepository(){
     fi
     git clone https://github.com/laugenbrezel1004/dotfiles.git
     echo "Overwriting existing configfiles"
-    rm -rf /home/$setupFor/.config/{bat,btop,cava,foot,kitty,lsd,neofetch,vim,ranger}
-    rm -rf /home/$setupFor/{.aliases,.tmux.conf,.vimrc,.zshrc}
-    mv -f dotfiles/{bat,btop,cava,foot,kitty,lsd,neofetch,ranger} /home/$setupFor/.config/
-    mv -f dotfiles/{.aliases,.tmux.conf,.vimrc,.zshrc} /home/$setupFor/
+sudo  rm -rf /home/$setupFor/.config/{bat,btop,cava,foot,kitty,lsd,neofetch,vim,ranger}
+sudo  rm -rf /home/$setupFor/{.aliases,.tmux.conf,.vimrc,.zshrc}
+sudo  mv -f dotfiles/{bat,btop,cava,foot,kitty,lsd,neofetch,ranger} /home/$setupFor/.config/
+sudo  mv -f dotfiles/{.aliases,.tmux.conf,.vimrc,.zshrc} /home/$setupFor/
     echo 
     echo "You are all set!!!"
     exit 0
