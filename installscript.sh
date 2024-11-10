@@ -104,7 +104,7 @@ _pullGitrepository(){
 
     git clone https://github.com/laugenbrezel1004/dotfiles.git
     echo "Overwriting existing configfiles"
-	
+    echo $USER	
     if [ "$USER" = "root" ]; then
 	    rm -rf $USER/.config/{bat,btop,cava,foot,kitty,lsd,neofetch,nvim,vim,ranger}
 		rm -rf /$USER/{.aliases,.tmux.conf,.vimrc,.zshrc}
