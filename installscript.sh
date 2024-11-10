@@ -98,8 +98,8 @@ _pullGitrepository(){
     echo "Pulling down the git repository"
     cd /tmp
     git clone https://github.com/laugenbrezel1004/dotfiles.git
-    mv dotfiles/{bat,btop,cava,foot,kitty,lsd,neofetch,nvim,starship.toml,ranger} "/home/$setupFor/.config/"
-    mv dotfiles/{.aliases,.tmux.conf,.vimrc,.zshrc} "/home/$setupFor/"
+    mv -T dotfiles/{bat,btop,cava,foot,kitty,lsd,neofetch,nvim,starship.toml,ranger} "/home/$setupFor/.config/"
+    mv -T dotfiles/{.aliases,.tmux.conf,.vimrc,.zshrc} "/home/$setupFor/"
     rm -rf dotfiles
 }
 
