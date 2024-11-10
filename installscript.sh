@@ -106,7 +106,7 @@ _pullGitrepository(){
     echo "Overwriting existing configfiles"
     echo $USER	
     if [ "$USER" = "root" ]; then
-	    rm -rf $USER/.config/{bat,btop,cava,foot,kitty,lsd,neofetch,nvim,vim,ranger}
+	    rm -rf /$USER/.config/{bat,btop,cava,foot,kitty,lsd,neofetch,nvim,vim,ranger}
 		rm -rf /$USER/{.aliases,.tmux.conf,.vimrc,.zshrc}
 		mv -f dotfiles/{bat,btop,cava,foot,kitty,lsd,neofetch,ranger,nvim} /$USER/.config/
 		mv -f dotfiles/{.aliases,.tmux.conf,.vimrc,.zshrc} /$USER/
