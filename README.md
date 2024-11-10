@@ -18,4 +18,5 @@ Gentoo: coming soon
 Arch:   coming soon
 
 # Some pictures
+## Hyprland
 ![2024-11-10-085728_hyprshot](https://github.com/user-attachments/assets/89de6399-426e-4d7b-900b-e267e7f7c8cc)
