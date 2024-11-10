@@ -109,6 +109,7 @@ _pullGitrepository(){
 	sudo  mv -f dotfiles/{.aliases,.tmux.conf,.vimrc,.zshrc} /home/$USER/
 	echo 
     echo "You are all set!!!"
+    neofetch
     exit 0
     }
 
