@@ -98,9 +98,10 @@ _pullGitrepository(){
     echo "Pulling down the git repository"
     cd /tmp
     git clone https://github.com/laugenbrezel1004/dotfiles.git
-    mv -T dotfiles/{bat,btop,cava,foot,kitty,lsd,neofetch,nvim,starship.toml,ranger} "/home/$setupFor/.config/"
-    mv -T dotfiles/{.aliases,.tmux.conf,.vimrc,.zshrc} "/home/$setupFor/"
-    rm -rf dotfiles
+    #echo "Overwriting existing configfiles"
+    #rm -rf "/home/$setupFor/.config/{bat,btop,cava,foot,kitty,lsd,neofetch,vim,ranger}" 
+    mv -f dotfiles/{bat,btop,cava,foot,kitty,lsd,neofetch,vim,ranger} "/home/$setupFor/.config/"
+    mv -f dotfiles/{.aliases,.tmux.conf,.vimrc,.zshrc} "/home/$setupFor/"
 }
 
 main() {
