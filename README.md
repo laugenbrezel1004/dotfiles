@@ -9,3 +9,8 @@ Be aware that ths script is not finished yet, so be careful when executing it.
 It is also a good idea to familiarize yourself with the content of the script before you execute it!
 
 ``wget https://raw.githubusercontent.com/laugenbrezel1004/dotfiles/refs/heads/main/installscript.sh && bash installscript.sh``
+
+# Support for:
+Debian: in progress
+Gentoo: coming soon
+Arch:   coming soon
