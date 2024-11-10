@@ -97,6 +97,9 @@ _installsoftware(){
 _pullGitrepository(){
     echo "Pulling down the git repository"
     cd /tmp
+    if [ -d dotfiles ]; then
+        rm -rf dotfiles
+    fi
     git clone https://github.com/laugenbrezel1004/dotfiles.git
     echo "Overwriting existing configfiles"
     rm -rf "/home/$setupFor/.config/{bat,btop,cava,foot,kitty,lsd,neofetch,vim,ranger}" 
@@ -116,6 +119,7 @@ main() {
     echo "Starting the installer..."
     sleep 5
     echo "Identifying OS..."
+    _identify_os  # Call the function to identify OS
     echo "Please enter the name of the user who should receive the configfiles"
     read -r setupFor
     while true; do
@@ -136,7 +140,6 @@ main() {
         esac
     done
 
-    _identify_os  # Call the function to identify OS
     _installsoftware #install the needed software 
     _pullGitrepository # download the git repo
     # Check if OS was found by evaluating the variable 'os'
