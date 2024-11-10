@@ -1,5 +1,5 @@
 # Why I got the installation script
-I am just to lazy to manualy install all dotfiles on my servers at home. So the idea is to put some time in a installation script and just execute it, when i want my dotfiles or my Hyprland config.
+I am just to lazy to manually install all dotfiles on my servers at home. So the idea is to put some time in a installation script and just execute it, when i want my dotfiles or my Hyprland config.
 # Backup your old .config
 It's best when you backup your old .config directory, just in case. Backing up the .vimrv and .zshrc is certainly not wrong either.
 # Adapt to your system
