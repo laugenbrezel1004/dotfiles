@@ -51,6 +51,7 @@
         "class<steam>": " ",
         "class<spotify>": "",
         "class<keepassxc>": " ",
+        "class<vscode>": "vscode",
  },
 
 

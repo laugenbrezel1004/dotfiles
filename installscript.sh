@@ -6,8 +6,9 @@ set -e
 
 # Set global variables
 os=""
+setupFor=""
 installer=""
-installSoftware=("bat" "btop" "foot" "kitty" "lsd" "neofetch" "nvim" "ranger" "tmux" "zsh" "starship" "cava")
+installSoftware=("bat" "btop" "foot" "kitty" "lsd" "neofetch" "git" "nvim" "ranger" "tmux" "zsh" "starship" "cava")
 installHyprlandSoftware=("mpv" "pulse" "swaync" "waybar" "wofi")
 installHyprland=false
 # Get the OS 
@@ -63,13 +64,31 @@ _installsoftware(){
     echo "Installing software and dependencies..."
     sleep 5
     if [ "$os" = "gentoo" ]; then
-        echo "Updating Gentoo-Repository"
+        echo "Updating portage repository"
         sleep 3
         emerge --sync
         for i in "$installSoftware[@]"; do
             emerge $i
         done 
     fi
+
+    if [ "$os" = "debian" || "$os" = "ubuntu" ]; then
+        echo "Updating apt repository"
+        sleep 3
+        apt update -y
+        for i in "$installSoftware[@]"; do
+            apt install $i
+        done
+        ecoh "Finished installing software"
+    fi
+}
+
+_pullGitrepository(){
+    echo "Pulling down the git repository"
+    cd /tmp
+    git clone https://github.com/laugenbrezel1004/dotfiles.git
+    mv bat btop cava foot kitty lsd neofetch nvim starship.toml ranger $setupFor/.config
+    mv .aliases .tmux.conf .vimrc .zshrc $setupFor
 }
 main() {
     currentUser=$(whoami)
@@ -78,10 +97,12 @@ main() {
         echo "Abording!!!"
         exit 1
     fi
+
     echo "Starting the installer..."
     sleep 5
     echo "Identifying OS..."
-
+    echo "Please enter the name of the user who should receive the configfiles"
+    read setupFor
     while true; do
         read -p "Do you also want to install hyprland? (yes/no) " yn
         case $yn in
@@ -103,6 +124,7 @@ main() {
 
     _identify_os  # Call the function to identify OS
     _installsoftware #install the needed software 
+    _pullGitrepository # download the git repo
     # Check if OS was found by evaluating the variable 'os'
     if [ -z "$os" ]; then  # If 'os' is empty, it means no OS was found
         echo "Unable to find OS type, aborting the script!!!"
