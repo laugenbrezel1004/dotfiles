@@ -92,7 +92,7 @@ _installsoftware(){
 
     echo "Installing starship..."
     sleep 3
-    curl -sS https://starship.rs/install.sh | sh
+    sudo curl -sS https://starship.rs/install.sh | sh
 }
 
 _pullGitrepository(){
