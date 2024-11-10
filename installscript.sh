@@ -104,7 +104,7 @@ _pullGitrepository(){
     echo "Overwriting existing configfiles"
     rm -rf "/home/$setupFor/.config/{bat,btop,cava,foot,kitty,lsd,neofetch,vim,ranger}" 
     rm -rf "/home/$setupFor/{.aliases,.tmux.conf,.vimrc,.zshrc}"
-    mv -f dotfiles/{bat,btop,cava,foot,kitty,lsd,neofetch,vim,ranger} "/home/$setupFor/.config/"
+    mv -f dotfiles/{bat,btop,cava,foot,kitty,lsd,neofetch,ranger} "/home/$setupFor/.config/"
     mv -f dotfiles/{.aliases,.tmux.conf,.vimrc,.zshrc} "/home/$setupFor/"
 }
 
