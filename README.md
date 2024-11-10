@@ -20,3 +20,19 @@ Arch:   coming soon
 # Some pictures
 ## Hyprland
 ![2024-11-10-085728_hyprshot](https://github.com/user-attachments/assets/89de6399-426e-4d7b-900b-e267e7f7c8cc)
+
+## Waybar
+![2024-11-10-090247_hyprshot](https://github.com/user-attachments/assets/97c045df-788f-4a93-81b1-fe8552ca7967)
+
+## Neofetch
+![2024-11-10-090345_hyprshot](https://github.com/user-attachments/assets/2935f1d4-3d10-42f2-a17d-0b697e8dc3a2)
+
+## Bat
+![2024-11-10-090418_hyprshot](https://github.com/user-attachments/assets/ecc08c1e-a8be-491f-b8a7-2ccec1921f1b)
+
+## Lsd 
+![2024-11-10-090521_hyprshot](https://github.com/user-attachments/assets/7307f446-8861-4f7d-b841-1f2a6c2e43b7)
+
+## Ranger
+![2024-11-10-090548_hyprshot](https://github.com/user-attachments/assets/8115a08e-71f2-4dd0-b875-9d9874f9487c)
+
