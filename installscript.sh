@@ -9,7 +9,7 @@ set -e
 os=""
 setupFor=""
 installer=""
-installSoftware=("bat" "btop" "foot" "kitty" "lsd" "neofetch" "git" "neovim" "vim" "ranger" "tmux" "zsh" "cava")
+installSoftware=("bat" "btop" "wget" "curl" "foot" "kitty" "lsd" "neofetch" "git" "neovim" "vim" "ranger" "tmux" "zsh" "cava")
 installHyprlandSoftware=("mpv" "pulse" "swaync" "waybar" "wofi")
 installHyprland=false
 # Get the OS 
