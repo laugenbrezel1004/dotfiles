@@ -92,7 +92,7 @@ _installsoftware(){
 
     echo "Installing starship..."
     sleep 3
-    sudo curl -sS https://starship.rs/install.sh | sh
+    sudo curl -sS https://starship.rs/install.sh | sudo sh
 }
 
 _pullGitrepository(){
@@ -123,6 +123,7 @@ main() {
 #    echo "Starting the installer..."
     sleep 5
     echo "Identifying OS..."
+    sleep 2
     _identify_os  # Call the function to identify OS
 #    echo "Please enter the name of the user who should receive the configfiles"
 #    read -r setupFor
