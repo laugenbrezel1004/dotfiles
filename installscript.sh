@@ -99,7 +99,7 @@ _pullGitrepository(){
     echo "Pulling down the git repository"
     cd /tmp
     if [ -d dotfiles ]; then
-        rm -rf dotfiles
+        sudo rm -rf dotfiles
     fi
     git clone https://github.com/laugenbrezel1004/dotfiles.git
     echo "Overwriting existing configfiles"
