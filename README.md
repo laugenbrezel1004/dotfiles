@@ -12,5 +12,7 @@ It is also a good idea to familiarize yourself with the content of the script be
 
 # Support for:
 Debian: in progress
+
 Gentoo: coming soon
+
 Arch:   coming soon
