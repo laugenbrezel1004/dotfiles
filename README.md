@@ -30,3 +30,7 @@ Arch:   coming soon
 ## Ranger
 ![2024-11-10-090548_hyprshot](https://github.com/user-attachments/assets/8115a08e-71f2-4dd0-b875-9d9874f9487c)
 
+# Code from different Repos
+The code in the nvim directory is from the https://github.com/NvChad/NvChad projekt
+-> https://nvchad.com
+

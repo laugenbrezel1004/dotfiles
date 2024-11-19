@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="border:0px solid black" width='1073px' height='296px'>
+  <defs>
+    <linearGradient id="rainbow" x1="50" x2="973" y1="50" y2="196" gradientUnits="userSpaceOnUse" >
+      <stop offset="0%" style="stop-color:#f79533;" />
+      <stop offset="14.285%" style="stop-color:#f37055;" />
+      <stop offset="28.571%" style="stop-color:#ef4e7b;" />
+      <stop offset="42.857%" style="stop-color:#a166ab;" />
+      <stop offset="57.142%" style="stop-color:#5073b8;" />
+      <stop offset="71.428%" style="stop-color:#1098ad;" />
+      <stop offset="85.714%" style="stop-color:#07b39b;" />
+      <stop offset="100%" style="stop-color:#6fba82;" />
+    </linearGradient>
+  </defs>
+  <text x="100" y="100" font-size="16px" font-family="monospace" dy="0" xml:space="preserve" dominant-baseline="hanging" fill="url(#rainbow)"><tspan
+    x="100" dy="0.00em">██████╗ ██████╗  ██████╗ ██╗  ██╗██╗   ██╗▄█╗███████╗    ██████╗  ██████╗ ████████╗███████╗</tspan><tspan
+    x="100" dy="1.18em">██╔══██╗██╔══██╗██╔═████╗╚██╗██╔╝╚██╗ ██╔╝╚═╝██╔════╝    ██╔══██╗██╔═████╗╚══██╔══╝██╔════╝</tspan><tspan
+    x="100" dy="1.18em">██████╔╝██████╔╝██║██╔██║ ╚███╔╝  ╚████╔╝    ███████╗    ██║  ██║██║██╔██║   ██║   ███████╗</tspan><tspan
+    x="100" dy="1.18em">██╔═══╝ ██╔══██╗████╔╝██║ ██╔██╗   ╚██╔╝     ╚════██║    ██║  ██║████╔╝██║   ██║   ╚════██║</tspan><tspan
+    x="100" dy="1.18em">██║     ██║  ██║╚██████╔╝██╔╝ ██╗   ██║      ███████║    ██████╔╝╚██████╔╝   ██║   ███████║</tspan><tspan
+    x="100" dy="1.18em">╚═╝     ╚═╝  ╚═╝ ╚═════╝ ╚═╝  ╚═╝   ╚═╝      ╚══════╝    ╚═════╝  ╚═════╝    ╚═╝   ╚══════╝</tspan></text>
+</svg>
