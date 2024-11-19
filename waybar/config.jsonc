@@ -32,7 +32,7 @@
         "clock",
          "custom/weather",
          "custom/cycle_wall",
-         "custom/clipboard",
+         //"custom/clipboard",
         "custom/power",
          "custom/custom"
     ],
@@ -192,7 +192,7 @@
         "format-charging": " {capacity}%",
         "format-plugged": " {capacity}%",
         "format-alt": "{icon} {time}",
-        // "format-good": "", // An empty format will hide the module
+        // "format-good": "", // An empty format will hide the modul 
         "format-full": " {capacity}%",
         "format-icons": [
             "",
@@ -229,7 +229,7 @@
         "spacing": 15
     },
     "clock": {
-        "timezone": "Asia/Calcutta",
+        "timezone": "Europe/Berlin",
         "format": " {:%d <small>%a</small> %H:%M}",
         //"format": " {:%a %b %d %Y | %H:%M}",
         "format-alt": " {:%A %B %d %Y (%V) | %r}",
