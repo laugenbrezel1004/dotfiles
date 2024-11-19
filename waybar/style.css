@@ -73,6 +73,10 @@
 #cpu,
 #memory,
 #disk,
+#backlight,
+#battery,
+#custom-power,
+#custom-cycle_wall,
 #temperature,
 #custom-music,
 #custom-notifications 
