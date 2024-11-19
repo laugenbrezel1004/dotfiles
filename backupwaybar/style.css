@@ -37,7 +37,7 @@
 @define-color pink #f5c2e7;
 @define-color flamingo #f2cdcd;
 @define-color rosewater #f5e0dc;
-
+@define-color gentoo #54487a;
 /* =============================== */
 /* Universal Styling */
 * {
@@ -63,30 +63,25 @@
 
 /* =============================== */
 /* Main Modules */
-#custom-launcher,
-#workspaces,
+/*#workspaces,*/
 #window,
 #tray,
-#backlight,
 #clock,
-#battery,
 #pulseaudio,
 #network,
 #mpd,
 #cpu,
 #memory,
 #disk,
+#backlight,
+#battery,
+#custom-power,
+#custom-cycle_wall,
 #temperature,
 #custom-music,
-#custom-updates,
-#custom-nordvpn,
-#custom-notifications,
-#custom-power,
 #custom-custom,
-#custom-cycle_wall,
-#custom-clipboard,
-#custom-ss,
-#custom-weather {
+#custom-notifications 
+{
   background-color: @surface0;
   color: @text;
   border-radius: 16px;
@@ -100,51 +95,6 @@
 }
 
 /* =============================== */
-/* Launcher Module */
-#custom-launcher {
-  color: @green;
-  padding-top: 0px;
-  padding-bottom: 0px;
-  padding-right: 10px;
-}
-
-/* =============================== */
-/* Workspaces */
-#workspaces {
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
-#workspaces * {
-  font-size: 0px;
-}
-
-#workspaces button {
-  background-color: @surface3;
-  color: @mauve;
-  border-radius: 100%;
-  min-height: 14px;
-  min-width: 14px;
-  margin: 5px 8px;
-  padding: 0px;
-  /*transition: all 0.5s cubic-bezier(0.33, 1.0, 0.68, 1.0); easeInOutCubic */
-  transition: all 0.5s cubic-bezier(.55, -0.68, .48, 1.68);
-  box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
-}
-
-#workspaces button.active {
-  /*color: @surface0;
-    border-radius: 1rem;
-    padding: 0rem 10px;*/
-  background: radial-gradient(circle, rgba(203, 166, 247, 1) 0%, rgba(193, 168, 247, 1) 12%, rgba(249, 226, 175, 1) 19%, rgba(189, 169, 247, 1) 20%, rgba(182, 171, 247, 1) 24%, rgba(198, 255, 194, 1) 36%, rgba(177, 172, 247, 1) 37%, rgba(170, 173, 248, 1) 48%, rgba(255, 255, 255, 1) 52%, rgba(166, 174, 248, 1) 52%, rgba(160, 175, 248, 1) 59%, rgba(148, 226, 213, 1) 66%, rgba(155, 176, 248, 1) 67%, rgba(152, 177, 248, 1) 68%, rgba(205, 214, 244, 1) 77%, rgba(148, 178, 249, 1) 78%, rgba(144, 179, 250, 1) 82%, rgba(180, 190, 254, 1) 83%, rgba(141, 179, 250, 1) 90%, rgba(137, 180, 250, 1) 100%);
-  background-size: 400% 400%;
-  animation: gradient_f 20s ease-in-out infinite;
-  transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
-}
-
-#workspaces button:hover {
-  background-color: @mauve;
-}
 
 @keyframes gradient {
   0% {
@@ -188,6 +138,33 @@
 
 
 /* =============================== */
+/* Launcher Module */
+#custom-launcher {
+  color: @gentoo;
+  padding-top: 0px;
+  padding-bottom: 0px;
+  padding-right: 10px;
+}
+
+/* =============================== */
+/* Workspaces */
+#workspaces{
+    border-radius: 100%;
+color: @text;
+padding-left: 8px;
+padding-right: 8px;
+}
+
+#workspaces button {
+border-radius: 10px;
+background-color: @mauve;
+}
+
+#workspaces button.active {
+background-color: #64727D;
+    border-radius: 10px;
+}
+/* =============================== */
 /* System Monitoring Modules */
 #cpu,
 #memory,
@@ -218,16 +195,12 @@
 
 #disk {
   color: @peach;
-  border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
+  border-radius: 0px;
+  margin-right: 0px;
   padding-left: 5px;
-  padding-right: 1rem;
+  padding-right: 5px;
 }
 
-/* Updates Module */
-#custom-updates {
-  color: @sky;
-}
 
 /* =============================== */
 
@@ -240,7 +213,7 @@
 
 /* =============================== */
 
-
+/* =============================== */
 #custom-music.low {
   background: rgb(148, 226, 213);
   background: linear-gradient(52deg, rgba(148, 226, 213, 1) 0%, rgba(137, 220, 235, 1) 19%, rgba(116, 199, 236, 1) 43%, rgba(137, 180, 250, 1) 56%, rgba(180, 190, 254, 1) 80%, rgba(186, 187, 241, 1) 100%);
@@ -291,12 +264,10 @@
 /* Music/PlayerCTL Module */
 #custom-music {
   color: @mauve;
+  border-radius: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
-
-/* =============================== */
-
-
-/* =============================== */
 /* Network Module */
 #network {
   color: @blue;
@@ -304,70 +275,24 @@
   border-bottom-right-radius: 0;
   margin-right: 0px;
   padding-right: 5px;
+  margin-right: 5px;
+ padding-right: 1.25rem;
+
 }
 
-/* =============================== */
 
 
 /* =============================== */
 /* PulseAudio Module */
 #pulseaudio {
   color: @mauve;
-  border-radius: 0;
+    border-radius: 0px;
   margin-right: 0px;
   padding-left: 5px;
   padding-right: 5px;
 }
 
-/* =============================== */
 
-
-/* =============================== */
-/* Backlight Module */
-#backlight {
-  color: @teal;
-  border-radius: 0;
-  margin-right: 0px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-/* =============================== */
-
-
-/* =============================== */
-/* Battery Module */
-#battery {
-  color: @green;
-  border-radius: 0;
-  margin-right: 0px;
-  padding-left: 5px;
-  padding-right: 5px;
-}
-
-#battery.charging {
-  color: @green;
-}
-
-#battery.warning:not(.charging) {
-  color: @maroon;
-}
-
-#battery.critical:not(.charging) {
-  color: @red;
-  animation-name: blink;
-  animation-duration: 1s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-  animation-direction: alternate;
-}
-
-@keyframes blink {
-  to {
-    background: @red;
-    color: @surface1;
-  }
-}
 
 /* =============================== */
 
@@ -387,48 +312,3 @@
   color: @mauve;
   padding-right: 1.25rem;
 }
-
-/* =============================== */
-
-
-/* =============================== */
-/* |       Custom Modules        | */
-/* =============================== */
-#custom-custom {
-  color: @peach;
-  padding-right: 1.25rem;
-  margin-right: 0px;
-}
-
-/* Screenshot */
-#custom-ss {
-  color: @mauve;
-  padding-right: 1.5rem;
-}
-
-/* Wallpaper */
-#custom-cycle_wall {
-  background: linear-gradient(45deg, rgba(245, 194, 231, 1) 0%, rgba(203, 166, 247, 1) 0%, rgba(243, 139, 168, 1) 13%, rgba(235, 160, 172, 1) 26%, rgba(250, 179, 135, 1) 34%, rgba(249, 226, 175, 1) 49%, rgba(166, 227, 161, 1) 65%, rgba(148, 226, 213, 1) 77%, rgba(137, 220, 235, 1) 82%, rgba(116, 199, 236, 1) 88%, rgba(137, 180, 250, 1) 95%);
-  background-size: 500% 500%;
-  animation: gradient 7s linear infinite;
-}
-
-/* Notifications Module */
-#custom-clipboard {
-  color: @mauve;
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-  margin-right: 0px;
-  padding-right: 8px;
-}
-
-/* Powermenu Module */
-#custom-power {
-  color: @mauve;
-  /* border-top-left-radius: 0;
-  border-bottom-left-radius: 0;
-  padding-left: 8px; */
-  padding-right: 1.20rem;
-}
-
-/* =============================== */
