@@ -105,12 +105,12 @@ _pullGitrepository(){
     git clone https://github.com/laugenbrezel1004/dotfiles.git
     echo "Overwriting existing configfiles"
     if [ "$USER" = "root" ]; then
-	    rm -rf /$USER/.config/{bat,btop,cava,foot,kitty,lsd,neofetch,nvim,vim,ranger}
+	  rm -rf /$USER/.config/{bat,btop,cava,foot,kitty,lsd,neofetch,nvim,vim,ranger}
 		rm -rf /$USER/{.aliases,.tmux.conf,.vimrc,.zshrc}
 		mv -f dotfiles/{bat,btop,cava,foot,kitty,lsd,neofetch,ranger,nvim} /$USER/.config/
 		mv -f dotfiles/{.aliases,.tmux.conf,.vimrc,.zshrc} /$USER/
 	else    
-	    sudo  rm -rf /home/$USER/.config/{bat,btop,cava,foot,kitty,lsd,neofetch,nvim,vim,ranger}
+	  sudo  rm -rf /home/$USER/.config/{bat,btop,cava,foot,kitty,lsd,neofetch,nvim,vim,ranger}
 		sudo  rm -rf /home/$USER/{.aliases,.tmux.conf,.vimrc,.zshrc}
 		sudo  mv -f dotfiles/{bat,btop,cava,foot,kitty,lsd,neofetch,ranger,nvim} /home/$USER/.config/
 		sudo  mv -f dotfiles/{.aliases,.tmux.conf,.vimrc,.zshrc} /home/$USER/

@@ -12,18 +12,19 @@
     // Choose the order of the modules
     "modules-left": [
         "custom/launcher",
-        "hyprland/workspaces"
+        "hyprland/workspaces",
+        "cpu",
+        "memory",
+        "temperature",
+        "disk",
+        
     ],
     "modules-center": [
     "custom/music",
     ],
     "modules-right": [
         //"network",
-        "cpu",
-        "memory",
-        "temperature",
-        "disk",
-        "pulseaudio",
+       "pulseaudio",
         "custom/notifications",
         "tray",
         "clock"
