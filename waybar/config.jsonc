@@ -13,10 +13,10 @@
     "modules-left": [
         "custom/launcher",
         "hyprland/workspaces",
-         "cpu",
-         "memory",
-         "temperature",
-         "disk",
+        "cpu",
+        "memory",
+        "temperature",
+        "disk",
         "custom/updates"
     ],
     "modules-center": [
@@ -30,11 +30,11 @@
         "custom/notifications",
         "tray",
         "clock",
-         "custom/weather",
-         "custom/cycle_wall",
-         "custom/clipboard",
+        "custom/weather",
+        "custom/cycle_wall",
+        "custom/clipboard",
         "custom/power",
-         "custom/custom"
+        "custom/custom"
     ],
     "custom/launcher": {
         "format": "{}",
