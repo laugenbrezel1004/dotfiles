@@ -13,6 +13,8 @@ else
   RPROMPT=$'%(?.. %? %F{red}%Bx%b%F{reset})%(1j. %j %F{yellow}%Bbg %b%F{reset}.)'
 fi
 
+#Show the manpages with vim 
+export MANPAGER='nvim +Man!'
 
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
