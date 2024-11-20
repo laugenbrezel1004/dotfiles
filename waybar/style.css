@@ -102,15 +102,36 @@
 /* =============================== */
 /* Launcher Module */
 #custom-launcher {
-  color: @green;
+  color: @gentoo;
   padding-top: 0px;
   padding-bottom: 0px;
   padding-right: 10px;
 }
 
+
 /* =============================== */
 /* Workspaces */
-#workspaces {
+
+#workspaces{
+border-radius: 100%;
+color: @text;
+padding-left: 8px;
+padding-right: 8px;
+}
+
+#workspaces button {
+border-radius: 10px;
+background-color: @mauve;
+}
+
+#workspaces button.active {
+background-color: #64727D;
+    border-radius: 10px;
+}
+
+
+/* for laptopuse */
+/*#workspaces {
   padding-left: 8px;
   padding-right: 8px;
 }
@@ -127,16 +148,16 @@
   min-width: 14px;
   margin: 5px 8px;
   padding: 0px;
-  /*transition: all 0.5s cubic-bezier(0.33, 1.0, 0.68, 1.0); easeInOutCubic */
-  transition: all 0.5s cubic-bezier(.55, -0.68, .48, 1.68);
+  transition: all 0.5s cubic-bezier(0.33, 1.0, 0.68, 1.0); easeInOutCubic */
+ /* transition: all 0.5s cubic-bezier(.55, -0.68, .48, 1.68);
   box-shadow: rgba(0, 0, 0, 0.288) 2px 2px 5px 2px;
 }
 
 #workspaces button.active {
-  /*color: @surface0;
+  color: @surface0;
     border-radius: 1rem;
     padding: 0rem 10px;*/
-  background: radial-gradient(circle, rgba(203, 166, 247, 1) 0%, rgba(193, 168, 247, 1) 12%, rgba(249, 226, 175, 1) 19%, rgba(189, 169, 247, 1) 20%, rgba(182, 171, 247, 1) 24%, rgba(198, 255, 194, 1) 36%, rgba(177, 172, 247, 1) 37%, rgba(170, 173, 248, 1) 48%, rgba(255, 255, 255, 1) 52%, rgba(166, 174, 248, 1) 52%, rgba(160, 175, 248, 1) 59%, rgba(148, 226, 213, 1) 66%, rgba(155, 176, 248, 1) 67%, rgba(152, 177, 248, 1) 68%, rgba(205, 214, 244, 1) 77%, rgba(148, 178, 249, 1) 78%, rgba(144, 179, 250, 1) 82%, rgba(180, 190, 254, 1) 83%, rgba(141, 179, 250, 1) 90%, rgba(137, 180, 250, 1) 100%);
+  /*background: radial-gradient(circle, rgba(203, 166, 247, 1) 0%, rgba(193, 168, 247, 1) 12%, rgba(249, 226, 175, 1) 19%, rgba(189, 169, 247, 1) 20%, rgba(182, 171, 247, 1) 24%, rgba(198, 255, 194, 1) 36%, rgba(177, 172, 247, 1) 37%, rgba(170, 173, 248, 1) 48%, rgba(255, 255, 255, 1) 52%, rgba(166, 174, 248, 1) 52%, rgba(160, 175, 248, 1) 59%, rgba(148, 226, 213, 1) 66%, rgba(155, 176, 248, 1) 67%, rgba(152, 177, 248, 1) 68%, rgba(205, 214, 244, 1) 77%, rgba(148, 178, 249, 1) 78%, rgba(144, 179, 250, 1) 82%, rgba(180, 190, 254, 1) 83%, rgba(141, 179, 250, 1) 90%, rgba(137, 180, 250, 1) 100%);
   background-size: 400% 400%;
   animation: gradient_f 20s ease-in-out infinite;
   transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
@@ -145,7 +166,7 @@
 #workspaces button:hover {
   background-color: @mauve;
 }
-
+*/
 @keyframes gradient {
   0% {
     background-position: 0% 50%;
