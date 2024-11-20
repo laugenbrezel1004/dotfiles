@@ -41,7 +41,7 @@
       "return-type": "json",
       "on-click": "pkill wofi || wofi --show drun -n",
       "on-click-right": "pkill wofi || wofi --show run -n",
-  },
+  ,
 
   "hyprland/workspaces": { 
     "one-click": "activate", 

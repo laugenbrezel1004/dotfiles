@@ -64,23 +64,30 @@
 /* =============================== */
 /* Main Modules */
 /*#workspaces,*/
+#custom-launcher,
+#workspaces,
 #window,
 #tray,
+#backlight,
 #clock,
+#battery,
 #pulseaudio,
 #network,
 #mpd,
 #cpu,
 #memory,
 #disk,
-#backlight,
-#battery,
-#custom-power,
-#custom-cycle_wall,
 #temperature,
 #custom-music,
+#custom-updates,
+#custom-nordvpn,
+#custom-notifications,
+#custom-power,
 #custom-custom,
-#custom-notifications 
+#custom-cycle_wall,
+#custom-clipboard,
+#custom-ss,
+#custom-weather
 {
   background-color: @surface0;
   color: @text;
@@ -149,7 +156,7 @@
 /* =============================== */
 /* Workspaces */
 #workspaces{
-    border-radius: 100%;
+border-radius: 100%;
 color: @text;
 padding-left: 8px;
 padding-right: 8px;
