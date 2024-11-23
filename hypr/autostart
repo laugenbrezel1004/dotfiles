@@ -49,6 +49,7 @@ $scripts/wall ~/.config/hypr/wallpapers/1.jpg &
 # audio
 gentoo-pipewire-launcher &
 
+=======
 # Applets
 $scripts/appindicator.py &
 blueman-applet &

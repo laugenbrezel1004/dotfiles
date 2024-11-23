@@ -15,7 +15,7 @@
         "hyprland/workspaces",
         "cpu",
         "memory",
-       // "temperature",
+        "temperature",
         "disk",
         "custom/updates"
     ],
