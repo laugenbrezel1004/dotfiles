@@ -2,7 +2,7 @@
     "layer": "top", // Waybar at top layer
     "position": "top", // Waybar position (top|bottom|left|right)
     //"gtk-layer-shell": "false",
-    "height": 45, // Waybar height (to be removed for auto height)
+    "height": 47, // Waybar height (to be removed for auto height)
     // "width": 2560, // Waybar width
     "spacing": 0, // Gaps between modules (0px) Adjusted in the css
     "margin-top": 0,
@@ -30,8 +30,9 @@
         "custom/notifications",
         "tray",
         "clock",
-         "custom/weather",
-         "custom/cycle_wall",
+        "custom/weather",
+        "custom/cycle_wall",
+        "custom/clipboard",
         "custom/power",
         "custom/custom"
     ],
@@ -87,8 +88,8 @@
         "interval": 2
     },
     "temperature": {
-        //"thermal-zone": 1,
-        //"hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
+        "thermal-zone": 1,
+        "hwmon-path": "/sys/class/hwmon/hwmon3/temp1_input",
         "critical-threshold": 40,
         "format-critical": "{icon} {temperatureC}°C",
         "format": "{icon} {temperatureC}°C",
@@ -303,13 +304,10 @@
         "exec": "~/.scripts/tools/expand clipboard",
         "return-type": "json",
         // Window position is managed in Hyperland config's windowrulev2
-        "on-click": "pkill tofi || sleep 0.15 && cliphist list | tofi -c ~/.config/tofi/tofi.clip.conf | cliphist decode | wl-copy",
-        "on-click-middle": "rm -f ~/.cache/cliphist/db",
-        "on-click-right": "pkill tofi || sleep 0.15 && cliphist list | tofi -c ~/.config/tofi/tofi.clip.conf | cliphist delete",
         // Here "-l top_right -x -15 -y 10" doesn't matter as '-n' mode is used
-        // "on-click": "pkill wofi || cliphist list | wofi --dmenu -p clippick -l top_right -x -15 -y 10 -n | cliphist decode | wl-copy",
-        // "on-click-middle": "rm -f ~/.cache/cliphist/db",
-        // "on-click-right": "pkill wofi || cliphist list | wofi --dmenu -p clippick -l top_right -x -15 -y 10 -n | cliphist delete",
+         "on-click": "pkill wofi || cliphist list | wofi --dmenu -p clippick -l top_right -x -15 -y 10 -n | cliphist decode | wl-copy",
+         "on-click-middle": "rm -f ~/.cache/cliphist/db",
+         "on-click-right": "pkill wofi || cliphist list | wofi --dmenu -p clippick -l top_right -x -15 -y 10 -n | cliphist delete",
         "escape": true
     },
     "custom/power": {

@@ -1,3 +1,6 @@
+alias m="vim /etc/portage/make.conf"
+alias update="emerge -atvuDN @world"
+alias s="sudo"
 alias .='cd '
 alias sudo='sudo '
 alias python='python3'
