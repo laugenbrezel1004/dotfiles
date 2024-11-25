@@ -117,6 +117,7 @@ _pullGitrepository(){
 	fi
 
     echo 
+    source ~/.zshrc
     echo "You are all set!!!"
     neofetch
     exit 0
