@@ -1,7 +1,7 @@
 #!/usr/bin/bash
 
 # variables
-scripts=~/.scripts
+scripts=~/.config/.scripts
 
 # gsettings
 #gsettings set org.gnome.desktop.interface gtk-theme 'Tokyonight-Dark-BL-LB'
@@ -26,7 +26,7 @@ $scripts/launch_waybar &
 
 # wallpaper
 $scripts/wall ~/.config/hypr/wallpapers/1.jpg &
-
+hyprpaper
 # effects
 # $scripts/tools/rgb &
 

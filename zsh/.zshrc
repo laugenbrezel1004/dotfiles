@@ -162,3 +162,5 @@ zinit snippet OMZP::sudo
 #
 #
 #
+
+eval $(thefuck --alias)

@@ -1,8 +1,11 @@
 alias m="vim /etc/portage/make.conf"
+alias :q="exit"
 alias update="emerge -atvuDN @world"
 alias s="sudo"
-alias .='cd '
-alias sudo='sudo '
+alias please="sudo"
+alias rr="rm -rf"
+alias how="tldr"
+alias .='cd'
 alias python='python3'
 alias edit='code --profile notepad'
 alias nvide='env -u WAYLAND_DISPLAY neovide --multigrid'
@@ -23,7 +26,7 @@ alias pacdiff='sudo -H DIFFPROG=meld pacdiff'
 alias pashare='~/Documents/Scripts/pashare'
 alias pamic='~/Documents/Scripts/pamic'
 alias codium-features='~/Documents/Scripts/codium-features.sh'
-#alias ls='lsd -a'
+alias ls='lsd -a'
 alias ll='lsd -ahl'
 alias l='lsd -ahl'
 alias lst='lsd -a --tree -I .git'
@@ -33,8 +36,6 @@ alias vdir='vdir --color=auto'
 alias grep='grep --color=auto'
 alias fgrep='fgrep --color=auto'
 alias egrep='egrep --color=auto'
-alias boot-options='pkexec env DISPLAY=$DISPLAY XAUTHORITY=$XAUTHORITY HOME=$HOME garuda-boot-options -style kvantum 2>/dev/null & disown'
-alias clrbuff='free -h && sudo sysctl -w vm.drop_caches=3 && sudo sync && echo 3 | sudo tee /proc/sys/vm/drop_caches && free -h'
 alias sshperm='find .ssh/ -type f -exec chmod 600 {} \;; find .ssh/ -type d -exec chmod 700 {} \;; find .ssh/ -type f -name "*.pub" -exec chmod 644 {} \;'
 
 # Common use
@@ -43,15 +44,11 @@ alias untar='tar -zxvf '
 alias wget='wget -c '
 alias psmem='ps auxf | sort -nr -k 4'
 alias psmem10='ps auxf | sort -nr -k 4 | head -10'
-alias reflect='sudo reflector --verbose -f 10 -l 50 -a 2 -p https --sort rate --save /etc/pacman.d/mirrorlist && cat /etc/pacman.d/mirrorlist'
 alias ..='cd ..'
 alias ...='cd ../..'
 alias ....='cd ../../..'
 alias .....='cd ../../../..'
 alias ......='cd ../../../../..'
-
-#Cleanup orphaned packages & cache
-
 
 #Recent Installed Packages
 
