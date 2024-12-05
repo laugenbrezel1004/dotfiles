@@ -3,6 +3,7 @@ alias :q="exit"
 alias update="emerge -atvuDN @world"
 alias s="sudo"
 alias please="sudo"
+alias goodbye="shutdown -h now"
 alias rr="rm -rf"
 alias how="tldr"
 alias .='cd'
