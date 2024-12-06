@@ -9,8 +9,8 @@ set -e
 os=""
 setupFor=""
 installer=""
-installSoftware=("bat" "btop" "wget" "curl" "foot" "kitty" "lsd" "neofetch" "git" "neovim" "vim" "ranger" "tmux" "zsh" "cava")
-installHyprlandSoftware=("mpv" "pulse" "swaync" "waybar" "wofi")
+installSoftware=("bat" "btop" "wget" "curl" "kitty" "thefuck" "lsd" "neofetch" "git" "neovim" "vim" "ranger" "tmux" "zsh")
+installHyprlandSoftware=("mpv" "pulse" "swaync" "waybar" "wofi" "cava")
 installHyprland=false
 # Get the OS 
 _identify_os() {
@@ -20,7 +20,7 @@ _identify_os() {
         installer="emerge"
         echo "Found $os as OS and $installer as packagemanager"
         return
-    elif grep -qi gentoo /etc/os-release; then
+    elif grep -qi gentoo /etc/os-release; the
         os="gentoo"
         installer="emerge"
         echo "Found $os as OS and $installer as packagemanager"
