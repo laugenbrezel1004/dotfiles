@@ -29,25 +29,25 @@ fi
 if [ -f ~/.dotfiles/zsh/bindkey ]; then
     source ~/.dotfiles/zsh/bindkey
 fi
-if [ -f ~/.dotfiles/zsh/dependencies]; then
+if [ -f ~/.dotfiles/zsh/dependencies ]; then
      source ~/.dotfiles/zsh/dependencies
 fi
-if [ -f ~/.dotfiles/zsh/eval]; then
+if [ -f ~/.dotfiles/zsh/eval ]; then
      source ~/.dotfiles/zsh/eval
 fi
-if [ -f ~/.dotfiles/zsh/export]; then
+if [ -f ~/.dotfiles/zsh/export ]; then
     source ~/.dotfiles/zsh/export
 fi
-if [ -f ~/.dotfiles/zsh/setopt]; then
+if [ -f ~/.dotfiles/zsh/setopt ]; then
     source ~/.dotfiles/zsh/setopt
 fi
-if [ -f ~/.dotfiles/zsh/unsetopt]; then
+if [ -f ~/.dotfiles/zsh/unsetopt ]; then
     source ~/.dotfiles/zsh/unsetopt
 fi
-if [ -f ~/.dotfiles/zsh/zinit]; then
+if [ -f ~/.dotfiles/zsh/zinit ]; then
     source ~/.dotfiles/zsh/zinit
 fi
-if [ -f ~/.dotfiles/zsh/zstyle]; then
+if [ -f ~/.dotfiles/zsh/zstyle ]; then
     source ~/.dotfiles/zsh/zstyle
 fi
 
