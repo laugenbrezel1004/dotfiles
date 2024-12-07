@@ -10,17 +10,18 @@ scripts=~/.config/.scripts
 #gsettings set org.gnome.desktop.interface cursor-theme 'Sweet-cursors'
 
 # notification daemon
-swaync &> /dev/nulll &
+swaync  &
 
 # waybar
-waybar &> /dev/nulll &
+waybar  &
 # $scripts/dynamic &
 
 # wallpaper
-hyprpaper &> /dev/nulll &
+hyprpaper  &
 
 # audio
 gentoo-pipewire-launcher &
+wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+
 # wpctl?
 
 =======
