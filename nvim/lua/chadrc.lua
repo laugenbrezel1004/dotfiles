@@ -14,4 +14,12 @@ M.base46 = {
 	-- },
 }
 
+M.ui = {
+  statusline = {
+  theme = "vscode_colored",
+  separator_style = "round",
+  }
+}
+
+
 return M
