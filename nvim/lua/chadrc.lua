@@ -21,5 +21,16 @@ M.ui = {
   }
 }
 
+M.term = {
+   winopts = { number = false },
+   sizes = { sp = 0.3, vsp = 0.2, ["bo sp"] = 0.3, ["bo vsp"] = 0.2 },
+   float = {
+     row = 0.3, col = 0.25,
+     width = 0.5, height = 0.4,
+     border = "single",
+   },
+ }
+
+
 
 return M
