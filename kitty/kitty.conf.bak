@@ -1,11 +1,10 @@
 # vim:fileencoding=utf-8:foldmethod=marker
 
 #: Fonts {{{
-
-font_family      CaskaydiaCove Nerd Font
-bold_font        CaskaydiaCove Nerd Font
-italic_font      CaskaydiaCove Nerd Font
-bold_italic_font CaskaydiaCove Nerd Font
+# font_family      CaskaydiaCove Nerd Font
+# bold_font        CaskaydiaCove Nerd Font
+# italic_font      CaskaydiaCove Nerd Font
+# bold_italic_font CaskaydiaCove Nerd Font
 # Delugia
 # Operator Mono SSm Lig Book Italic
 font_size 14
@@ -558,3 +557,11 @@ map ctrl+KP_0               restore_font_size
 map ctrl+f                  launch --location=hsplit --allow-remote-control kitty +kitten search.py @active-kitty-window-id
 map f5                      load_config_file
 map f6                      debug_config
+
+
+# BEGIN_KITTY_FONTS
+font_family      family="Monaspace Radon"
+bold_font        auto
+italic_font      auto
+bold_italic_font auto
+# END_KITTY_FONTS

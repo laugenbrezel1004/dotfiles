@@ -50,7 +50,7 @@ if [ -f ~/.dotfiles/zsh/zstyle ]; then
     source ~/.dotfiles/zsh/zstyle
 fi
 
-if [  which thefuck -eq 0 ]; then
+if  which thefuck &> /dev/null ; then
   eval $(thefuck --alias)
 fi
 
