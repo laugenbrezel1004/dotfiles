@@ -77,6 +77,13 @@ _identify_os() {
         dialog --title 'OS' --msgbox "Found $os as OS and $installer as packagemanger" 6 40
         return
     fi
+
+if [ -z "$os" ]; then  # If 'os' is empty, it means no OS was found
+        echo "Unable to find OS type, aborting the script!!!"
+        exit 1  # Exit with a non-zero status code to indicate failure
+    fi
+
+
 }
 
 #install software and dependencies
@@ -94,13 +101,15 @@ _installsoftware(){
 	fi
 
     if [ "$os" = "debian" ] || [ "$os" = "ubuntu" ]; then
-        echo "Updating apt repository"
-        sleep 3
-        sudo apt update -y
-        for i in "${installSoftware[@]}"; do
-            sudo apt install -y "$i"
-        done
-        echo "Finished installing software"
+
+       for i in $(seq 1 100); do
+		    echo $i
+		    sleep 0.2
+		    done | dialog --gauge "Updating apt repository" 10 70 0
+	        sudo apt update -y apt update -y 
+	        for i in "${installSoftware[@]}"; do
+	            sudo apt "$i"
+	        done 
     fi
 
     echo "Installing starship..."
@@ -135,7 +144,7 @@ _pullGitrepository(){
     neofetch
     exit 0
     }
-    _checkFundamentalSoftware(){
+_checkFundamentalSoftware(){
         if ! which git &> /dev/null ; then
             echo "Please install git"
         fi
@@ -148,37 +157,10 @@ main() {
 #    currentUser=$(whoami)
 #    if [ "$currentUser" != "root" ]; then
 #
-#   check if Fundamental are one the system 
-#   if not -> user needs to install them by hand
-    _checkFundamentalSoftware    
-
-    # Identify the OS
+    _checkFundamentalSoftware # check if Fundamental are one the system 
     _identify_os  # Call the function to identify OS
-#    while true; do
-#        read -rp "Do you also want to install hyprland? (yes/no) " yn
-#        case $yn in
-#            [Yy]* ) 
-#                echo "You answered yes. Proceeding..."
-#                installHyprland=true
-#                break
-#                ;;
-#            [Nn]* ) 
-#                echo "You answered no. Proceeding..."
-#                break
-#                ;;
-#            * ) 
-#                echo "Please answer yes or no."
-#                ;;
-#        esac
-#    done
-#
-    _installsoftware #install the needed software 
+    _installsoftware # install the needed software 
     _pullGitrepository # download the git repo
-    # Check if OS was found by evaluating the variable 'os'
-    if [ -z "$os" ]; then  # If 'os' is empty, it means no OS was found
-        echo "Unable to find OS type, aborting the script!!!"
-        exit 1  # Exit with a non-zero status code to indicate failure
-    fi
 }
 
 main  # Call main function
