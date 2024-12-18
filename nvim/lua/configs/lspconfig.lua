@@ -5,24 +5,35 @@ local capabilities = require("nvchad.configs.lspconfig").capabilities
 local lspconfig = require("lspconfig")
 
 -- list of all servers configured.
+-- lua is set under the hood internally in nvchad
 lspconfig.servers = {
-    "lua_ls",
     "clangd",
+    "lua_ls",
 }
-
--- list of servers configured with default config.
+-- local servers = { "clangd" }
+-- -- list of servers configured with default config.
 local default_servers = {}
+<<<<<<< HEAD
 
 -- lsps with default config
 -- loud all server
 -- for _, lsp in ipairs(default_servers) do
+=======
+--
+-- -- lsps with default config
+-- for _, lsp in ipairs(servers) do
+>>>>>>> 731ca6cd6858945a594ebfa507bd88dc068378a7
 --     lspconfig[lsp].setup({
 --         on_attach = on_attach,
 --         on_init = on_init,
 --         capabilities = capabilities,
 --     })
 -- end
+<<<<<<< HEAD
 --
+=======
+
+>>>>>>> 731ca6cd6858945a594ebfa507bd88dc068378a7
 lspconfig.clangd.setup({
     on_attach = function(client, bufnr)
         client.server_capabilities.documentFormattingProvider = false
@@ -32,7 +43,6 @@ lspconfig.clangd.setup({
     on_init = on_init,
     capabilities = capabilities,
 })
-
 lspconfig.lua_ls.setup({
     on_attach = on_attach,
     on_init = on_init,

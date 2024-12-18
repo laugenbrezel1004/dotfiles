@@ -1,7 +1,9 @@
 local options = {
     formatters_by_ft = {
         lua = { "stylua" },
-        c = { "clang-format" },
+        c = { "clang_format" },
+        css = { "prettier" },
+        html = { "prettier" },
         -- cpp = { "clang-format" },
         -- go = { "gofumpt", "goimports-reviser", "golines" },
         -- haskell = { "fourmolu", "stylish-haskell" },
@@ -10,7 +12,7 @@ local options = {
 
     formatters = {
         -- C & C++
-        ["clang-format"] = {
+        ["clang_format"] = {
             prepend_args = {
                 "-style={ \
                          IndentWidth: 4, \

@@ -14,13 +14,19 @@ M.base46 = {
     -- },
 }
 
+-- statusline config
 M.ui = {
     statusline = {
         theme = "vscode_colored",
+<<<<<<< HEAD
+=======
+        -- TODO: get the percentage instead of ln and col
+>>>>>>> 731ca6cd6858945a594ebfa507bd88dc068378a7
         separator_style = "round",
     },
 }
 
+-- terminal configs
 M.term = {
     winopts = { number = false },
     sizes = { sp = 0.3, vsp = 0.2, ["bo sp"] = 0.3, ["bo vsp"] = 0.2 },

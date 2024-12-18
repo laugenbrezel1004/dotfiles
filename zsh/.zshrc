@@ -50,8 +50,15 @@ if [ -f ~/.dotfiles/zsh/zstyle ]; then
     source ~/.dotfiles/zsh/zstyle
 fi
 
+<<<<<<< HEAD
 # if [  which thefuck -eq 0 ]; then
 #   eval $(thefuck --alias)
 # fi
 #
+=======
+if  which thefuck &> /dev/null ; then
+  eval $(thefuck --alias)
+fi
+
+>>>>>>> 731ca6cd6858945a594ebfa507bd88dc068378a7
 eval "$(starship init zsh)"

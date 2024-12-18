@@ -1,15 +1,20 @@
 return {
     {
+<<<<<<< HEAD
         "stevearc/conform.nvim",
         -- event = 'BufWritePre', -- uncomment for format on save
         opts = require("configs.conform"),
     },
     -- These are some examples, uncomment them if you want to see them work!
     {
+=======
+        -- github site
+>>>>>>> 731ca6cd6858945a594ebfa507bd88dc068378a7
         "neovim/nvim-lspconfig",
         event = { "BufWritePre", "BufNewFile" },
         config = function()
             require("nvchad.configs.lspconfig").defaults()
+            -- configs dir, lspconfig file (no need to write out the .lua extension)
             require("configs.lspconfig")
         end,
     },
@@ -39,7 +44,7 @@ return {
     },
     {
         "stevearc/conform.nvim",
-        event = "BufWritePre",
+        event = "BufWritePre", -- format on save
         config = function()
             require("configs.conform")
         end,
@@ -54,7 +59,8 @@ return {
     },
     {
         "nvim-treesitter/nvim-treesitter",
-        event = { "BufWritePre", "BufNewFile" },
+        -- load treesitter one the event of opening a file or creating a file
+        event = { "BufReadPre", "BufNewFile" },
         config = function()
             require("configs.treesitter")
         end,

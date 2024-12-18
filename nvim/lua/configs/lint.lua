@@ -1,8 +1,7 @@
 local lint = require("lint")
 
 lint.linters_by_ft = {
-    c = { "cmakelint" },
-    -- unable to install package luacheck lua = { "luacheck" },
+    lua = { "luacheck" },
 }
 
 lint.linters.luacheck.args = {
@@ -21,6 +20,7 @@ lint.linters.cmakelint.args = {
 
 vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {
     callback = function()
+        -- check file when event above is given
         lint.try_lint()
     end,
 })

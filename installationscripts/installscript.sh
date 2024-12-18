@@ -9,21 +9,32 @@ set -e
 os=""
 setupFor=""
 installer=""
-installSoftware=("bat" "btop" "wget" "curl" "kitty" "thefuck" "lsd" "neofetch" "git" "neovim" "vim" "ranger" "tmux" "zsh")
+dependencies=("git" "dialog")
+installSoftware=("bat" "btop" "wget" "curl" "kitty" "thefuck" "lsd" "neofetch" "neovim" "vim" "zsh" "ranger" "tmux")
 installHyprlandSoftware=("mpv" "pulse" "swaync" "waybar" "wofi" "cava")
 installHyprland=false
 # Get the OS 
 _identify_os() {
+	
+	dialog --title 'Installation Wizard' --msgbox 'Lets start with the installation!' 6 40 
+	
+	
+	for i in $(seq 1 100); do
+	  echo $i
+	  sleep 0.01
+	done | dialog --gauge "Checking OS type..." 10 70 0
+	
+
     # Check for Gentoo
     if [ -f /etc/gentoo-release ]; then
         os="gentoo"
         installer="emerge"
-        echo "Found $os as OS and $installer as packagemanager"
+        dialog --title 'OS' --msgbox "Found $os as OS and $installer as packagemanager" 6 40 
         return
-    elif grep -qi gentoo /etc/os-release; the
+    elif grep -qi gentoo /etc/os-release &> /dev/null ; then
         os="gentoo"
         installer="emerge"
-        echo "Found $os as OS and $installer as packagemanager"
+        dialog --title 'OS' --msgbox "Found $os as OS and $installer as packagemanger" 6 40
         return
     fi
 
@@ -31,12 +42,12 @@ _identify_os() {
     if [ -f /etc/arch-release ]; then
         os="arch"
         installer="pacman"
-        echo "Found $os as OS and $installer as packagemanager"
+        dialog --title 'OS' --msgbox "Found $os as OS and $installer as packagemanger" 6 40
         return
-    elif grep -qi arch /etc/os-release; then
+    elif grep -qi arch /etc/os-release &> /dev/null ; then
         os="arch"
         installer="pacman"
-        echo "Found $os as OS and $installer as packagemanager"
+        dialog --title 'OS' --msgbox "Found $os as OS and $installer as packagemanger" 6 40
         return 
     fi
 
@@ -44,12 +55,13 @@ _identify_os() {
     if [ -f /etc/ubuntu-release ]; then
         os="ubuntu"
         installer="apt"
-        echo "Found $os as OS and $installer as packagemanager"
+        dialog --title 'OS' --msgbox "Found $os as OS and $installer as packagemanger" 6 40
         return
-    elif grep -qi ubuntu /etc/os-release; then
+
+    elif grep -qi ubuntu /etc/os-release &> /dev/null ; then
         os="ubuntu"
         installer="apt"
-        echo "Found $os as OS and $installer as packagemanager"
+        dialog --title 'OS' --msgbox "Found $os as OS and $installer as packagemanger" 6 40
         return
     fi
 
@@ -57,37 +69,47 @@ _identify_os() {
     if [ -f /etc/debian-release ]; then
         os="debian"
         installer="apt"
-        echo "Found $os as OS and $installer as packagemanager"
+        dialog --title 'OS' --msgbox "Found $os as OS and $installer as packagemanger" 6 40
         return
-    elif grep -qi debian /etc/os-release; then
+    elif grep -qi debian /etc/os-release &> /dev/null ; then
         os="debian"
         installer="apt"
-        echo "Found $os as OS and $installer as packagemanager"
+        dialog --title 'OS' --msgbox "Found $os as OS and $installer as packagemanger" 6 40
         return
     fi
+
+if [ -z "$os" ]; then  # If 'os' is empty, it means no OS was found
+        echo "Unable to find OS type, aborting the script!!!"
+        exit 1  # Exit with a non-zero status code to indicate failure
+    fi
+
+
 }
 
 #install software and dependencies
 _installsoftware(){
-    echo "Installing software and dependencies..."
-    sleep 5
     if [ "$os" = "gentoo" ]; then
-        echo "Updating portage repository"
-        sleep 3
-        sudo emerge --sync
-        for i in "${installSoftware[@]}"; do
-            sudo emerge "$i"
-        done 
-    fi
+	   
+        for i in $(seq 1 100); do
+		    echo $i
+		    sleep 0.2
+		    done | dialog --gauge "Updating portage repository" 10 70 0
+	        sudo emaint --yes sync --all
+	        for i in "${installSoftware[@]}"; do
+	            sudo emerge "$i"
+	        done 
+	fi
 
     if [ "$os" = "debian" ] || [ "$os" = "ubuntu" ]; then
-        echo "Updating apt repository"
-        sleep 3
-        sudo apt update -y
-        for i in "${installSoftware[@]}"; do
-            sudo apt install -y "$i"
-        done
-        echo "Finished installing software"
+
+       for i in $(seq 1 100); do
+		    echo $i
+		    sleep 0.2
+		    done | dialog --gauge "Updating apt repository" 10 70 0
+	        sudo apt update -y apt update -y 
+	        for i in "${installSoftware[@]}"; do
+	            sudo apt "$i"
+	        done 
     fi
 
     echo "Installing starship..."
@@ -122,47 +144,23 @@ _pullGitrepository(){
     neofetch
     exit 0
     }
+_checkFundamentalSoftware(){
+        if ! which git &> /dev/null ; then
+            echo "Please install git"
+        fi
 
+        if ! which dialog &> /dev/null ; then
+            echo "Please install dialog"
+        fi
+    }
 main() {
 #    currentUser=$(whoami)
 #    if [ "$currentUser" != "root" ]; then
-#        echo "You are not root, please execute the script as root"
-#        echo "Aborting!!!"
-#        exit 1
-#    fi
 #
-#    echo "Starting the installer..."
-    sleep 5
-    echo "Identifying OS..."
-    sleep 2
+    _checkFundamentalSoftware # check if Fundamental are one the system 
     _identify_os  # Call the function to identify OS
-#    echo "Please enter the name of the user who should receive the configfiles"
-#    read -r setupFor
-    while true; do
-        read -rp "Do you also want to install hyprland? (yes/no) " yn
-        case $yn in
-            [Yy]* ) 
-                echo "You answered yes. Proceeding..."
-                installHyprland=true
-                break
-                ;;
-            [Nn]* ) 
-                echo "You answered no. Proceeding..."
-                break
-                ;;
-            * ) 
-                echo "Please answer yes or no."
-                ;;
-        esac
-    done
-
-    _installsoftware #install the needed software 
+    _installsoftware # install the needed software 
     _pullGitrepository # download the git repo
-    # Check if OS was found by evaluating the variable 'os'
-    if [ -z "$os" ]; then  # If 'os' is empty, it means no OS was found
-        echo "Unable to find OS type, aborting the script!!!"
-        exit 1  # Exit with a non-zero status code to indicate failure
-    fi
 }
 
 main  # Call main function
