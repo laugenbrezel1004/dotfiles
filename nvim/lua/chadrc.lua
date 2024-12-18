@@ -18,10 +18,6 @@ M.base46 = {
 M.ui = {
     statusline = {
         theme = "vscode_colored",
-<<<<<<< HEAD
-=======
-        -- TODO: get the percentage instead of ln and col
->>>>>>> 731ca6cd6858945a594ebfa507bd88dc068378a7
         separator_style = "round",
     },
 }
