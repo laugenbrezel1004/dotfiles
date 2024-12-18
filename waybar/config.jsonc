@@ -32,7 +32,6 @@
         "custom/weather",
         "custom/cycle_wall",
         "custom/clipboard",
-        "custom/power",
         "custom/custom"
     ],
 
@@ -308,13 +307,6 @@
          "on-click-middle": "rm -f ~/.cache/cliphist/db",
          "on-click-right": "pkill wofi || cliphist list | wofi --dmenu -p clippick -l top_right -x -15 -y 10 -n | cliphist delete",
         "escape": true
-    },
-    "custom/power": {
-        "format": "{}",
-        // "exec": "~/.scripts/tools/expand power",
-        "exec": "echo '{\"text\":\"⏻\",\"tooltip\":\"Power\"}'",
-        "return-type": "json",
-        "on-click": "~/.config/wlogout/launch.sh"
     },
     "custom/custom": {
         "format": "{}",
