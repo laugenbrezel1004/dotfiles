@@ -14,9 +14,9 @@ lint.linters.luacheck.args = {
 
 lint.linters.cmakelint.args = {
     unpack(lint.linters.cmakelint.args),
-    "--globals",
-    "love",
-    "vim",
+    -- "--globals",
+    -- "love",
+    -- "vim",
 }
 
 vim.api.nvim_create_autocmd({ "BufEnter", "BufWritePost", "InsertLeave" }, {

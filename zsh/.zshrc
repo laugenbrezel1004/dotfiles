@@ -50,8 +50,8 @@ if [ -f ~/.dotfiles/zsh/zstyle ]; then
     source ~/.dotfiles/zsh/zstyle
 fi
 
-if [  which thefuck -eq 0 ]; then
-  eval $(thefuck --alias)
-fi
-
+# if [  which thefuck -eq 0 ]; then
+#   eval $(thefuck --alias)
+# fi
+#
 eval "$(starship init zsh)"

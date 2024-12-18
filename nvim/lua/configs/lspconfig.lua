@@ -14,14 +14,15 @@ lspconfig.servers = {
 local default_servers = {}
 
 -- lsps with default config
-for _, lsp in ipairs(default_servers) do
-    lspconfig[lsp].setup({
-        on_attach = on_attach,
-        on_init = on_init,
-        capabilities = capabilities,
-    })
-end
-
+-- loud all server
+-- for _, lsp in ipairs(default_servers) do
+--     lspconfig[lsp].setup({
+--         on_attach = on_attach,
+--         on_init = on_init,
+--         capabilities = capabilities,
+--     })
+-- end
+--
 lspconfig.clangd.setup({
     on_attach = function(client, bufnr)
         client.server_capabilities.documentFormattingProvider = false
