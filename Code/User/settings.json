@@ -1,0 +1,650 @@
+{
+    "launch": {
+        "version": "0.2.0",
+        "configurations": [
+            {
+                "name": "(gdb) Launch",
+                "type": "cppdbg",
+                "request": "launch",
+                "program": "${fileDirname}/${fileBasenameNoExtension}",
+                "args": [],
+                "stopAtEntry": false,
+                "cwd": "${workspaceFolder}",
+                "environment": [],
+                "externalConsole": false,
+                "MIMode": "gdb",
+                "miDebuggerPath": "/usr/bin/gdb",
+                "preLaunchTask": "Build",
+                "setupCommands": [
+                    {
+                        "description": "Enable pretty-printing for gdb",
+                        "text": "-enable-pretty-printing",
+                        "ignoreFailures": true
+                    }
+                ]
+            }
+        ]
+    },
+    "latex-workshop.latex.autoBuild.cleanAndRetry.enabled": true,
+    "latex-workshop.latex.autoBuild.run": "never",
+    "latex-workshop.latex.clean.fileTypes": [
+        "*/*.aux",
+        "*/*.synctex.gz"
+    ],
+    "latex-workshop.latex.outDir": "/tmp/Review-Paper/",
+    "latex-workshop.latex.recipe.default": "latexmk (lualatex)",
+    "latex-workshop.latex.recipes": [
+        {
+            "name": "latexmk 🔃",
+            "tools": [
+                "latexmk"
+            ]
+        },
+        {
+            "name": "latexmk (latexmkrc)",
+            "tools": [
+                "latexmk_rconly"
+            ]
+        },
+        {
+            "name": "latexmk (lualatex)",
+            "tools": [
+                "lualatexmk"
+            ]
+        },
+        {
+            "name": "latexmk (xelatex)",
+            "tools": [
+                "xelatexmk"
+            ]
+        },
+        {
+            "name": "pdflatex ➞ bibtex ➞ pdflatex × 2",
+            "tools": [
+                "pdflatex",
+                "bibtex",
+                "pdflatex",
+                "pdflatex"
+            ]
+        },
+        {
+            "name": "Compile Rnw files",
+            "tools": [
+                "rnw2tex",
+                "latexmk"
+            ]
+        },
+        {
+            "name": "Compile Jnw files",
+            "tools": [
+                "jnw2tex",
+                "latexmk"
+            ]
+        },
+        {
+            "name": "tectonic",
+            "tools": [
+                "tectonic"
+            ]
+        }
+    ],
+    "latex-workshop.latex.tools": [
+        {
+            "name": "latexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-pdf",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "lualatexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-lualatex",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "xelatexmk",
+            "command": "latexmk",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-xelatex",
+                "-outdir=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "latexmk_rconly",
+            "command": "latexmk",
+            "args": [
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "pdflatex",
+            "command": "pdflatex",
+            "args": [
+                "-synctex=1",
+                "-interaction=nonstopmode",
+                "-file-line-error",
+                "-output-directory=%OUTDIR%",
+                "%DOC%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "bibtex",
+            "command": "bibtex",
+            "args": [
+                "%DOCFILE%"
+            ],
+            "env": {}
+        },
+        {
+            "name": "rnw2tex",
+            "command": "Rscript",
+            "args": [
+                "-e",
+                "knitr::opts_knit$set(concordance = TRUE); knitr::knit('%DOCFILE_EXT%')"
+            ],
+            "env": {}
+        },
+        {
+            "name": "jnw2tex",
+            "command": "julia",
+            "args": [
+                "-e",
+                "using Weave; weave(\"%DOC_EXT%\", doctype=\"tex\")"
+            ],
+            "env": {}
+        },
+        {
+            "name": "jnw2texmintex",
+            "command": "julia",
+            "args": [
+                "-e",
+                "using Weave; weave(\"%DOC_EXT%\", doctype=\"texminted\")"
+            ],
+            "env": {}
+        },
+        {
+            "name": "tectonic",
+            "command": "tectonic",
+            "args": [
+                "--synctex",
+                "--keep-logs",
+                "%DOC%.tex"
+            ],
+            "env": {}
+        }
+    ],
+    "[cpp]": {
+        "editor.semanticHighlighting.enabled": false
+    },
+    "[css]": {
+        "editor.tabSize": 2
+    },
+    "[dart]": {
+        "editor.suggestSelection": "first",
+        "editor.tabCompletion": "onlySnippets",
+        "editor.wordBasedSuggestions": "off"
+    },
+    "[html]": {
+        "editor.tabSize": 2
+    },
+    "[javascript]": {
+        "editor.tabSize": 2
+    },
+    "[json]": {
+        "editor.tabSize": 2
+    },
+    "[latex]": {
+        "editor.formatOnSave": false
+    },
+    "[markdown]": {
+        "editor.quickSuggestions": {
+            "comments": "on",
+            "other": "on",
+            "strings": "on"
+        }
+    },
+    "[python]": {
+        "editor.semanticHighlighting.enabled": false
+    },
+    "[scss]": {
+        "editor.tabSize": 2
+    },
+    "[typescript]": {
+        "editor.tabSize": 2
+    },
+    "[typescriptreact]": {
+        "editor.formatOnSave": false,
+        "editor.tabSize": 2
+    },
+    "apc.electron": {
+        "frame": false,
+        "titleBarStyle": "hidden"
+    },
+    "apc.imports": [
+        "file:///home/proxzima/.config/Code/User/vsc.css",
+        "file:///home/proxzima/.config/Code/User/vsc.js",
+    ],
+    "apc.menubar.compact": true,
+    "appMap.inspectEnabled": true,
+    "breadcrumbs.enabled": true,
+    "C_Cpp.autocompleteAddParentheses": true,
+    "C_Cpp.clang_format_fallbackStyle": "{ BasedOnStyle: Google, IndentWidth: 2, ColumnLimit: 0}",
+    "C_Cpp.codeFolding": "enabled",
+    "C_Cpp.default.compilerArgs": [
+        "-g"
+    ],
+    "C_Cpp.default.compilerPath": "/usr/bin/g++",
+    "C_Cpp.default.cppStandard": "c++20",
+    "C_Cpp.default.cStandard": "c17",
+    "C_Cpp.default.defines": [
+        "${default}"
+    ],
+    "C_Cpp.default.includePath": [
+        "${workspaceFolder}/**",
+        "/usr/include",
+        "/usr/local/include",
+        "/usr/include/c++/11.1.0"
+    ],
+    "C_Cpp.default.intelliSenseMode": "gcc-x64",
+    "C_Cpp.inlayHints.autoDeclarationTypes.enabled": true,
+    "C_Cpp.inlayHints.autoDeclarationTypes.showOnLeft": true,
+    "C_Cpp.inlayHints.parameterNames.enabled": true,
+    "C_Cpp.inlayHints.parameterNames.hideLeadingUnderscores": true,
+    "C_Cpp.inlayHints.parameterNames.suppressWhenArgumentContainsName": true,
+    "C_Cpp.inlayHints.referenceOperator.enabled": true,
+    "C_Cpp.inlayHints.referenceOperator.showSpace": false,
+    "chat.editor.wordWrap": "on",
+    "color-highlight.markerType": "background",
+    "color-highlight.markRuler": false,
+    "csharp.referencesCodeLens.filteredSymbols": [],
+    "css.format.enable": true,
+    "css.format.newlineBetweenRules": true,
+    "css.format.newlineBetweenSelectors": true,
+    "css.format.spaceAroundSelectorSeparator": true,
+    "debug.onTaskErrors": "showErrors",
+    "debug.openDebug": "openOnDebugBreak",
+    "debug.showSubSessionsInToolBar": true,
+    "debug.toolBarLocation": "docked",
+    "diffEditor.experimental.showMoves": true,
+    "diffEditor.ignoreTrimWhitespace": true,
+    "diffEditor.maxComputationTime": 0,
+    "diffEditor.renderSideBySide": false,
+    "diffEditor.useInlineViewWhenSpaceIsLimited": false,
+    "diffEditor.wordWrap": "on",
+    "editor.acceptSuggestionOnEnter": "smart",
+    "editor.accessibilitySupport": "off",
+    "editor.autoClosingBrackets": "always",
+    "editor.bracketPairColorization.enabled": true,
+    "editor.codeActionsOnSave": {
+        "source.organizeImports": "never"
+    },
+    "editor.colorDecorators": false,
+    "editor.cursorBlinking": "phase",
+    "editor.cursorSmoothCaretAnimation": "on",
+    "editor.cursorStyle": "line-thin",
+    "editor.detectIndentation": false,
+    "editor.emptySelectionClipboard": false,
+    "editor.fontFamily": "Geist Mono, JetBrains Mono, Fira Code",
+    "editor.fontLigatures": "'ss01', 'ss02', 'ss03', 'ss04', 'ss05', 'ss06', 'zero', 'onum'",
+    "editor.fontSize": 13,
+    "editor.fontVariations": true,
+    "editor.fontWeight": "normal",
+    "editor.formatOnSave": false,
+    "editor.formatOnType": false,
+    "editor.glyphMargin": true,
+    "editor.guides.bracketPairs": "active",
+    "editor.guides.bracketPairsHorizontal": "active",
+    "editor.guides.highlightActiveBracketPair": true,
+    "editor.hover.above": false,
+    "editor.inlayHints.enabled": "on",
+    "editor.inlineSuggest.enabled": true,
+    "editor.insertSpaces": true,
+    "editor.lightbulb.enabled": "off",
+    "editor.lineHeight": 22,
+    "editor.linkedEditing": true,
+    "editor.matchBrackets": "never",
+    "editor.maxTokenizationLineLength": 99999999,
+    "editor.minimap.enabled": false,
+    "editor.mouseWheelScrollSensitivity": 1.5,
+    "editor.multiCursorModifier": "alt",
+    "editor.occurrencesHighlight": "off",
+    "editor.padding.top": 8,
+    "editor.quickSuggestions": {
+        "comments": "on",
+        "other": "on",
+        "strings": "on"
+    },
+    "editor.renderControlCharacters": true,
+    "editor.renderFinalNewline": "on",
+    "editor.renderLineHighlight": "gutter",
+    "editor.renderWhitespace": "none",
+    "editor.scrollbar.horizontal": "auto",
+    "editor.scrollbar.vertical": "auto",
+    "editor.selectionHighlight": true,
+    "editor.smoothScrolling": true,
+    "editor.stickyScroll.enabled": true,
+    "editor.stickyScroll.maxLineCount": 5,
+    "editor.stickyTabStops": false,
+    "editor.suggest.insertMode": "replace",
+    "editor.suggest.preview": true,
+    "editor.suggest.snippetsPreventQuickSuggestions": false,
+    "editor.suggestSelection": "first",
+    "editor.tabCompletion": "on",
+    "editor.tabSize": 4,
+    "editor.unicodeHighlight.ambiguousCharacters": false,
+    "editor.unicodeHighlight.invisibleCharacters": false,
+    "editor.wordBasedSuggestions": "matchingDocuments",
+    // "editor.wordSeparators": " /\\()\"'-.,:;<>~!@#$%^&*|+=[]{}~?│",
+    "editor.wordWrap": "on",
+    "emmet.excludeLanguages": [],
+    "emmet.includeLanguages": {
+        "javascript": "javascriptreact",
+        "markdown": "html",
+        "vue-html": "html"
+    },
+    "emptyIndent.highlightColor": "rgba(246,36,89,0.6)",
+    "emptyIndent.highlightIndent": false,
+    "emptyIndent.removeIndent": true,
+    "errorLens.fontStyleItalic": true,
+    "eslint.enable": true,
+    "eslint.workingDirectories": [
+        "src"
+    ],
+    "explorer.compactFolders": false,
+    "explorer.confirmDelete": false,
+    "explorer.confirmDragAndDrop": false,
+    "extensions.ignoreRecommendations": true,
+    "files.associations": {
+        "*.json": "jsonc",
+        "*.svg": "html",
+        "*.xml": "html",
+    },
+    "files.autoSave": "off",
+    "files.exclude": {
+        "**/.classpath": true,
+        "**/.DS_Store": true,
+        "**/.factorypath": true,
+        "**/.git": true,
+        "**/.hg": true,
+        "**/.project": true,
+        "**/.settings": true,
+        "**/.svn": true,
+        "**/CVS": true
+    },
+    "files.insertFinalNewline": false,
+    "files.restoreUndoStack": true,
+    "files.trimFinalNewlines": false,
+    "files.trimTrailingWhitespace": false,
+    "files.watcherExclude": {
+        "**/.DS_Store/**": true,
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/.hg/**": true,
+        "**/.svn/**": true,
+        "**/CVS/**": true,
+        "**/env/**": true,
+        "**/node_modules/**": true,
+        "**/venv/**": true,
+        "env-*": true
+    },
+    "git.autofetch": true,
+    "git.confirmSync": false,
+    "git.countBadge": "off",
+    "git.openRepositoryInParentFolders": "always",
+    "git.suggestSmartCommit": false,
+    "github.copilot.advanced": {
+        "inlineSuggestCount": 3
+    },
+    "github.copilot.chat.localeOverride": "en",
+    "github.copilot.chat.welcomeMessage": "never",
+    "github.copilot.editor.enableAutoCompletions": true,
+    "github.copilot.editor.enableCodeActions": true,
+    "github.copilot.enable": {
+        "*": true,
+        "markdown": true,
+        "plaintext": true,
+        "scminput": false,
+        "yaml": false
+    },
+    "gitlens.ai.experimental.openai.model": "gpt-3.5-turbo",
+    "gitlens.ai.experimental.provider": "openai",
+    "gitlens.blame.avatars": false,
+    "gitlens.blame.highlight.locations": [
+        "line",
+        "overview",
+        "gutter"
+    ],
+    "gitlens.codeLens.enabled": false,
+    "gitlens.currentLine.enabled": true,
+    "gitlens.heatmap.locations": [
+        "gutter",
+        "overview"
+    ],
+    "gitlens.hovers.currentLine.over": "line",
+    "gitlens.plusFeatures.enabled": false,
+    "gitlens.statusBar.enabled": true,
+    "gitlens.views.commits.avatars": false,
+    "grammarly.files.include": [
+        "**/*.md",
+        "**/*.txt",
+        "**/*.tex"
+    ],
+    "html.autoClosingTags": true,
+    "html.completion.attributeDefaultValue": "singlequotes",
+    "inlineChat.mode": "preview",
+    "java.configuration.runtimes": [
+        {
+            "name": "JavaSE-11",
+            "path": "/usr/lib/jvm/java-11-openjdk-amd64"
+        }
+    ],
+    "java.jdt.ls.java.home": "/usr/lib/jvm/java-11-openjdk-amd64",
+    "java.server.launchMode": "LightWeight",
+    "javascript.autoClosingTags": true,
+    "javascript.suggest.autoImports": true,
+    "javascript.suggest.completeFunctionCalls": true,
+    "javascript.suggest.enabled": true,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "javascript.validate.enable": false,
+    "js/ts.implicitProjectConfig.checkJs": true,
+    "json.maxItemsComputed": 100000,
+    "leetcode.colorizeProblems": true,
+    "leetcode.defaultLanguage": "python3",
+    "leetcode.editor.shortcuts": [
+        "submit",
+        "test",
+        "solution",
+        "description",
+        "star"
+    ],
+    "leetcode.hint.commandShortcut": false,
+    "leetcode.hint.commentDescription": false,
+    "leetcode.hint.configWebviewMarkdown": false,
+    "leetcode.showDescription": "In Webview",
+    // "leetcode.workspaceFolder": "C:\\Users\\e1451346\\.leetcode",
+    "liveServer.settings.donotShowInfoMsg": true,
+    "liveServer.settings.donotVerifyTags": true,
+    "liveServer.settings.file": "404.html",
+    "liveServer.settings.useLocalIp": true,
+    "markdown.preview.markEditorSelection": true,
+    "markdown.preview.scrollEditorWithPreview": false,
+    "markdown.preview.scrollPreviewWithEditor": false,
+    "notebook.lineNumbers": "on",
+    "polyglot-notebook.defaultNotebookExtension": ".dib",
+    "polyglot-notebook.defaultNotebookLanguage": "csharp",
+    "print.alternateBrowser": true,
+    "print.browserPath": "/usr/bin/google-chrome",
+    "print.colourScheme": "XCode",
+    "print.folder.exclude": [
+        "{bin,obj,out}",
+        "node_module",
+        "**/*.{bin,exe,dll,hex,pdb,pdf,pfx,png,jpg,gif,bmp,suo,pptx,ppt,jar,woff2,woff,ttf,eot,odt,otf,class}"
+    ],
+    "print.lineNumbers": "on",
+    "print.printAndClose": false,
+    "python.analysis.completeFunctionParens": true,
+    "python.formatting.blackArgs": [
+        "--line-length",
+        "120"
+    ],
+    "python.formatting.provider": "black",
+    "python.languageServer": "Pylance",
+    "python.linting.enabled": true,
+    "python.linting.ignorePatterns": [
+        ".vscode/*.py",
+        "**/site-packages/**/*.py",
+        ".git"
+    ],
+    "python.linting.pylintArgs": [
+        "--rcfile",
+        "${env:HOME}/.pylintrc"
+    ],
+    "python.linting.pylintEnabled": true,
+    "redhat.telemetry.enabled": false,
+    "scm.diffDecorationsIgnoreTrimWhitespace": "inherit",
+    "scm.showHistoryGraph": false,
+    "search.exclude": {
+        "**/*.code-search": true,
+        "**/bower_components": true,
+        "**/env": true,
+        "**/node_modules": true,
+        "**/venv": true
+    },
+    "security.workspace.trust.untrustedFiles": "open",
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext"
+    ],
+    "spellright.language": [
+        "en_GB"
+    ],
+    "spellright.notificationClass": "information",
+    "spellright.suggestionsInHints": false,
+    "sqltools.format": {
+        "language": "pl/sql",
+        "reservedWordCase": "upper"
+    },
+    "sqltools.highlightQuery": false,
+    "sqltools.codelensLanguages": [],
+    "spellright.useDocumentSymbolsInCode": true,
+    "svgPreview.autoOpen": true,
+    "svgPreview.scaleToFit": true,
+    "svgPreview.style": {
+        "html": {
+            "background": "rgba(255, 255, 255, 1)",
+            "background-position": "0 0, 13px 13px",
+            "background-size": "26px 26px"
+        }
+    },
+    "symbols.hidesExplorerArrows": false,
+    "task.problemMatchers.neverPrompt": {
+        "shell": true
+    },
+    "telemetry.telemetryLevel": "all",
+    "terminal.integrated.altClickMovesCursor": true,
+    "terminal.integrated.cursorBlinking": true,
+    "terminal.integrated.cursorStyle": "line",
+    "terminal.integrated.customGlyphs": true,
+    "terminal.integrated.defaultProfile.windows": "PowerShell",
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
+    "terminal.integrated.enablePersistentSessions": false,
+    "terminal.integrated.fontFamily": "'CaskaydiaCove Nerd Font', 'FiraCode Nerd Font', 'Hack Nerd Font Mono'",
+    "terminal.integrated.fontSize": 12,
+    "terminal.integrated.gpuAcceleration": "auto",
+    "terminal.integrated.profiles.linux": {
+        "zsh": {
+            "path": "/usr/bin/zsh"
+        }
+    },
+    "terminal.integrated.profiles.windows": {
+        "Command Prompt": {
+            "args": [],
+            "icon": "terminal-cmd",
+            "path": [
+                "${env:windir}\\Sysnative\\cmd.exe",
+                "${env:windir}\\System32\\cmd.exe"
+            ]
+        },
+        "Git Bash": {
+            "source": "Git Bash"
+        },
+        "PowerShell": {
+            "args": [
+                "-NoLogo"
+            ],
+            "icon": "terminal-powershell",
+            "source": "PowerShell"
+        }
+    },
+    "terminal.integrated.scrollback": 200000,
+    "terminal.integrated.shellIntegration.decorationsEnabled": "never",
+    "terminal.integrated.shellIntegration.enabled": false,
+    "terminal.integrated.smoothScrolling": true,
+    "terminal.integrated.tabs.enableAnimation": false,
+    "terminal.integrated.tabs.enabled": false,
+    "typescript.autoClosingTags": true,
+    "typescript.implementationsCodeLens.enabled": false,
+    "typescript.referencesCodeLens.enabled": true,
+    "typescript.suggest.autoImports": true,
+    "typescript.updateImportsOnFileMove.enabled": "always",
+    "typescript.validate.enable": false,
+    "vscode-office.editorTheme": "Auto",
+    "vscode-office.openOutline": false,
+    "window.commandCenter": false,
+    "window.customTitleBarVisibility": "never",
+    "window.menuBarVisibility": "compact",
+    "window.newWindowDimensions": "maximized",
+    "window.restoreWindows": "all",
+    "window.title": "${activeEditorShort}${separator}${rootName}",
+    "window.titleBarStyle": "native",
+    "window.titleSeparator": " ・☣・",
+    "window.zoomLevel": 0.5,
+    "workbench.activityBar.location": "bottom",
+    "workbench.editor.empty.hint": "hidden",
+    "workbench.editor.enablePreviewFromQuickOpen": false,
+    "workbench.editor.highlightModifiedTabs": true,
+    "workbench.editor.restoreViewState": false,
+    "workbench.editor.sharedViewState": false,
+    "workbench.editor.showTabs": "none",
+    "workbench.editor.tabActionLocation": "right",
+    "workbench.editor.tabSizing": "shrink",
+    "workbench.editorAssociations": {
+        "*.ipynb": "jupyter-notebook",
+        "{git,gitlens}:/**/*.{md,csv,svg}": "default",
+        "{git,gitlens}:/**/*.{md,csv}": "default"
+    },
+    "workbench.iconTheme": "material-icon-theme",
+    "workbench.layoutControl.enabled": false,
+    "workbench.layoutControl.type": "menu",
+    "workbench.list.smoothScrolling": true,
+    "workbench.panel.defaultLocation": "right",
+    "workbench.productIconTheme": "fluent-icons",
+    "workbench.reduceMotion": "off",
+    "workbench.sideBar.location": "right",
+    "workbench.startupEditor": "none",
+    "workbench.statusBar.visible": false,
+    "workbench.tips.enabled": false,
+    "workbench.colorTheme": "Catppuccin Mocha",
+}

@@ -1,0 +1,4 @@
+unsetopt extended_history
+unsetopt EXTENDED_HISTORY
+
+

@@ -1,0 +1,11 @@
+2025-01-14 13:03:47.400 [info] Extension host with pid 21815 started
+2025-01-14 13:03:47.400 [info] Skipping acquiring lock for /home/laurenz/.config/Code/User/workspaceStorage/bcf97f8b0ae10ea21a5ceacb73ef3c2f.
+2025-01-14 13:03:47.416 [info] ExtensionService#_doActivateExtension vscode.github-authentication, startup: false, activationEvent: 'onAuthenticationRequest:github'
+2025-01-14 13:03:47.473 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*'
+2025-01-14 13:03:47.508 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-01-14 13:03:47.541 [info] Eager extensions activated
+2025-01-14 13:03:47.545 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-01-14 13:03:47.547 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-01-14 13:03:51.950 [info] ExtensionService#_doActivateExtension vscode.git, startup: false, activationEvent: 'api', root cause: vscode.github
+2025-01-14 13:05:15.165 [info] Extension host terminating: renderer closed the MessagePort
+2025-01-14 13:05:15.173 [info] Extension host with pid 21815 exiting with code 0
