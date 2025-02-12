@@ -34,3 +34,5 @@ Arch:   coming soon
 The code in the nvim directory is from the https://github.com/NvChad/NvChad projekt
 -> https://nvchad.com
 
+=======
+# dotfiles
