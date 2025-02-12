@@ -1,0 +1,8 @@
+2025-01-14 13:39:08.791 [info] update#setState disabled
+2025-01-14 13:39:08.791 [info] update#ctor - updates are disabled as there is no update URL
+2025-01-14 13:40:42.707 [info] Extension host with pid 19144 exited with code: 0, signal: unknown.
+2025-01-14 13:40:42.712 [warning] Sending IPC message to channel 'vscode:reportError' for window that is destroyed
+2025-01-14 13:40:42.712 [error] [uncaught exception in main]: TypeError: Object has been destroyed
+2025-01-14 13:40:42.712 [error] TypeError: Object has been destroyed
+    at _.send (node:electron/js2c/browser_init:2:75233)
+    at Function.callback (file:///opt/vscode/resources/app/out/main.js:36:22642)

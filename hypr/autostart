@@ -1,0 +1,37 @@
+#!/usr/bin/env bash
+
+# variables
+scripts=~/.config/.scripts
+
+# gsettings
+#gsettings set org.gnome.desktop.interface gtk-theme 'Tokyonight-Dark-BL-LB'
+#gsettings set org.gnome.desktop.interface font-name 'SF Pro Text 9'
+#gsettings set org.gnome.desktop.interface icon-theme 'Tokyonight-Moon'
+#gsettings set org.gnome.desktop.interface cursor-theme 'Sweet-cursors'
+
+# notification daemon
+swaync  &
+
+# waybar
+waybar  &
+# $scripts/dynamic &
+
+# wallpaper
+hyprpaper  &
+
+# audio
+gentoo-pipewire-launcher &
+wpctl set-volume @DEFAULT_AUDIO_SINK@ 2%+
+# wpctl?
+
+=======
+# Applets
+$scripts/appindicator.py &
+blueman-applet &
+nm-applet --indicator &\
+
+# other
+hyprctl setcursor Sweet-cursors 30 
+wl-paste --watch cliphist store &
+notify-send -a aurora "hello $(whoami)" &
+libinput-gestures-setup start &
