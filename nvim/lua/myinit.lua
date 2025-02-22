@@ -15,12 +15,12 @@ local options = {
     undofile = true, -- keep undo history between sessions
     backup = false, -- Some servers have issues with backup files, see #649.
     writebackup = false,
+    -- foldcolumn = 2,
 }
 
 for key, value in pairs(options) do
     vim.opt[key] = value
 end
-
 -- vim.opt.shortmess:append("c") -- hide startup message
 
 -- highlight yank
@@ -40,6 +40,3 @@ vim.api.nvim_create_autocmd({ "bufwinenter" }, {
     pattern = "*.*",
     command = "silent! loadview",
 })
-
-vim.o.foldmethod = "manual" -- Default fold method
-vim.o.foldlevelstart = 0 -- Start with all folds open
