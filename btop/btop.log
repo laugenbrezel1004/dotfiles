@@ -1,3 +1,15 @@
 
 2022/06/30 (12:53:42) | ===> btop++ v.1.2.3
 2022/06/30 (12:53:42) | ERROR: Failed to get size of terminal!
+
+2025/02/16 (17:32:01) | ===> btop++ v.1.4.0
+2025/02/16 (17:32:01) | WARNING: ROCm SMI: Failed to get maximum GPU temperature, defaulting to 110°C
+
+2025/02/19 (17:49:29) | ===> btop++ v.1.4.0
+2025/02/19 (17:49:29) | WARNING: ROCm SMI: Failed to get maximum GPU temperature, defaulting to 110°C
+
+2025/02/20 (16:53:18) | ===> btop++ v.1.4.0
+2025/02/20 (16:53:18) | WARNING: ROCm SMI: Failed to get maximum GPU temperature, defaulting to 110°C
+
+2025/02/20 (17:27:03) | ===> btop++ v.1.4.0
+2025/02/20 (17:27:03) | WARNING: ROCm SMI: Failed to get maximum GPU temperature, defaulting to 110°C

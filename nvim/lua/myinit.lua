@@ -30,3 +30,16 @@ augroup highlight_yank
     autocmd TextYankPost * silent! lua require'vim.highlight'.on_yank({timeout = 80})
 augroup END
 ]])
+
+-- save folds
+vim.api.nvim_create_autocmd({ "bufwritepost" }, {
+    pattern = "*.*",
+    command = "mkview",
+})
+vim.api.nvim_create_autocmd({ "bufwinenter" }, {
+    pattern = "*.*",
+    command = "silent! loadview",
+})
+
+vim.o.foldmethod = "manual" -- Default fold method
+vim.o.foldlevelstart = 0 -- Start with all folds open

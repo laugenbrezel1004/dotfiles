@@ -1,4 +1,5 @@
 alias m="vim /etc/portage/make.conf"
+alias projects="/mnt/private/projects/"
 alias :q="exit"
 alias update="emerge -atvuDN @world"
 alias d="doas "
