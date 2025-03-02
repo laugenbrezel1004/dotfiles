@@ -6,7 +6,7 @@ local o = vim.o
 o.shiftwidth = 4
 o.tabstop = 4
 o.softtabstop = 4
-o.foldcolumn = auto
+o.foldcolumn = "2"
 o.foldmethod = "manual"
 o.foldlevelstart = 0
 
