@@ -179,37 +179,17 @@ disabled = true
 min_time = 1
 style = "fg:#f9e2af bg:#333a56"
 format = "[ $duration]($style)"
-disabled = true
+disabled = false
 
 [jobs]
 symbol = "華"
 style = "fg:#f9e2af bg:#333a56"
 format = "[ $symbol]($style)"
 
-[battery]
-full_symbol = " "
-charging_symbol = " "
-discharging_symbol = " "
-unknown_symbol = " "
-empty_symbol = " "
-format = "[ $symbol$percentage ]($style bg:#333a56)"
-disabled = true
-
-[[battery.display]]
-threshold = 15
-style = "bold fg:#f38ba8"
-
-[[battery.display]]
-threshold = 50
-style = "fg:#f9e2af"
-
-[[battery.display]]
-threshold = 101
-style = "bold #a6e3a1"
 
 # Prompt: optional param 1
 [time]
-disabled = true
+disabled = false
 time_format = "%R"
 style = "bg:#3b4363"
 format = '[](fg:#2c324a $style)[  $time ](fg:#94e2d5 $style)'
