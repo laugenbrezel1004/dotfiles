@@ -144,14 +144,18 @@ _pullGitrepository(){
     exit 0
 }
 _checkFundamentalSoftware(){
-        if ! which git &> /dev/null ; then
-            echo "Please install git"
-        fi
-
-        if ! which dialog &> /dev/null ; then
-            echo "Please install dialog"
-        fi
-        exit 1
+        missing_deps=false
+if ! which git &> /dev/null ; then
+    echo "Please install git"
+    missing_deps=true
+fi
+if ! which dialog &> /dev/null ; then
+    echo "Please install dialog"
+    missing_deps=true
+fi
+if $missing_deps ; then
+    exit 1
+fi
 }
 main() {
 #    currentUser=$(whoami)
