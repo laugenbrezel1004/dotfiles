@@ -89,7 +89,7 @@ if [ -z "$os" ]; then  # If 'os' is empty, it means no OS was found
 _installsoftware(){
     if [ "$os" = "gentoo" ]; then
 	   
-	        sudo emaint --yes sync --all &> /dev/null
+	      sudo emaint --yes sync --all &> /dev/null
         for i in $(seq 1 100); do
 		    echo $i
 		    sleep 0.2
