@@ -151,7 +151,7 @@ _checkFundamentalSoftware(){
         if ! which dialog &> /dev/null ; then
             echo "Please install dialog"
         fi
-        exit(1)
+        exit 1
 }
 main() {
 #    currentUser=$(whoami)
