@@ -11,8 +11,8 @@ setupFor=""
 installer=""
 dependencies=("git" "dialog")
 installSoftware=("bat" "btop" "wget" "curl" "kitty" "thefuck" "lsd" "neofetch" "neovim" "vim" "zsh" "ranger" "tmux")
-installHyprlandSoftware=("mpv" "pulse" "swaync" "waybar" "wofi" "cava")
-installHyprland=false
+# installHyprlandSoftware=("mpv" "pulse" "swaync" "waybar" "wofi" "cava")
+# installHyprland=false
 # Get the OS 
 _identify_os() {
 	
@@ -143,7 +143,7 @@ _pullGitrepository(){
     echo "You are all set!!!"
     neofetch
     exit 0
-    }
+}
 _checkFundamentalSoftware(){
         if ! which git &> /dev/null ; then
             echo "Please install git"
@@ -152,7 +152,7 @@ _checkFundamentalSoftware(){
         if ! which dialog &> /dev/null ; then
             echo "Please install dialog"
         fi
-    }
+}
 main() {
 #    currentUser=$(whoami)
 #    if [ "$currentUser" != "root" ]; then
