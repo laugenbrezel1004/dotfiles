@@ -105,30 +105,35 @@ _installsoftware(){
 
 _pullGitrepository(){
     echo "Backuping up .config direcotry"
+    mkdir $USER/.config.backup
+
     sleep 3
-    mv .config .config.bac
     echo "Pulling down the git repository"
-
-
     git clone https://github.com/laugenbrezel1004/dotfiles.git
-    echo "Overwriting existing configfiles"
-    if [  "$USER" = "root" ]; then
-      sudo mkdir $USER/.config.backup
-      sudo mv -f $USER/.config/{bat,btop,kitty,lsd,neofetch,ranger,nvim} $USER/.config.backup
-		  sudo mv -f dotfiles/{bat, btop, kitty, lsd, neofetch, nvim, ranger, qimgv, ranger, starship, thefuck, tmux, zsh} $USER/.config/
-	else    
-		  # rm -rf /home/$USER/{.aliases,.tmux.conf,.vimrc,.zshrc}
-      mkdir $USER/.config.backup
-      mv -f $USER/.config/{bat,btop,kitty,lsd,neofetch,ranger,nvim} $USER/.config.backup
-		  mv -f dotfiles/{bat, btop, kitty, lsd, neofetch, nvim, ranger, qimgv, ranger, starship, thefuck, tmux, zsh} $USER/.config/
-	fi
+    echo "Installing new config files"
 
-    echo 
+    mv -f dotfiles/{bat, btop, kitty, lsd, neofetch, nvim, ranger, qimgv, ranger, starship, thefuck, tmux, zsh} $USER/.config.backup
+
+    if [ -d $USER/.aliases]; then
+      sudo mv $USER/.aliases $USER/.config.backup/
+    fi
+    if [ -d $USER/.tmux.conf]; then
+      sudo mv $USER/.tmux.conf $USER/.config.backup/
+    fi
+    if [ -d $USER/.vimrc]; then
+      sudo mv $USER/.vimrc $USER/.config.backup/
+    fi
+    if [ -d $USER/.zshrc]; then
+      sudo mv $USER/.zshrc $USER/.config.backup/
+    fi
+
     source ~/.zshrc
     echo "You are all set!!!"
     neofetch
     exit 0
 }
+
+
 _checkFundamentalSoftware(){
     if ! which git &> /dev/null ; then
         echo "Please install git"
