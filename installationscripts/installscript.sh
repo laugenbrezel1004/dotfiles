@@ -164,17 +164,17 @@ _pullGitrepository(){
   if [ -d "$HOME/.config/dotfiles/zsh" ]; then
       mv -f "$HOME/.config/dotfiles/zsh" "$HOME/.config.backup"
   fi
-    if [ -d $HOME/.aliases]; then
-      sudo mv $HOME/.aliases $HOME/.config.backup/
+    if [ -d "$HOME/.aliases" ]; then
+      sudo mv "$HOME/.aliases"  "$HOME/.config.backup/"
     fi
-    if [ -d $HOME/.tmux.conf]; then
-      sudo mv $HOME/.tmux.conf $HOME/.config.backup/
+    if [ -d "$HOME/.tmux.conf" ]; then
+      sudo mv "$HOME/.tmux.conf" "$HOME/.config.backup/"
     fi
-    if [ -d $HOME/.vimrc]; then
-      sudo mv $HOME/.vimrc $HOME/.config.backup/
+    if [ -d "$HOME/.vimrc" ]; then
+      sudo mv "$HOME/.vimrc" "$HOME/.config.backup/"
     fi
-    if [ -d $HOME/.zshrc]; then
-      sudo mv $HOME/.zshrc $HOME/.config.backup/
+    if [ -d "$HOME/.zshrc" ]; then
+      sudo mv "$HOME/.zshrc" "$HOME/.config.backup/"
     fi
 
     source ~/.zshrc
