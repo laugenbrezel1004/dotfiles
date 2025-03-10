@@ -108,7 +108,7 @@ _pullGitrepository(){
       mkdir $HOME/.config.backup
     fi
     
-    if [ ! -d "$HOME/dotfiles" ]; then
+    if [ -d "$HOME/dotfiles" ]; then
       mv $HOME/dotfiles $HOME/dotfiles.backup
     fi
 
