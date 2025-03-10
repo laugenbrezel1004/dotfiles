@@ -14,7 +14,7 @@ _setupFor=""
 _installer=""
 _installSoftware_emerge=("bat" "btop" "kitty" "thefuck" "lsd" "curl" "neofetch" "neovim" "vim" "zsh" "ranger" "tmux")
 _installSoftware_apt=("bat" "btop" "lua5.4" "kitty" "curl" "thefuck" "lsd" "neofetch" "neovim" "vim" "zsh" "ranger" "tmux")
-_moveSoftware=("bat" "btop" "kitty" "thefuck" "lsd" "neofetch" "nvim" "vim" "zsh" "ranger" "tmux")
+_moveSoftware=("bat" "btop" "kitty" "thefuck" "lsd" "neofetch" "nvim" "zsh" "ranger" "tmux")
 
 
 # Get the OS 
