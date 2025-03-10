@@ -4,11 +4,13 @@
 set -e
 
 # Set global variables
+#
 _os=""
 _setupFor=""
 _installer=""
-_installSoftware_emerge=("bat" "btop" "wget" "curl" "kitty" "thefuck" "lsd" "neofetch" "neovim" "vim" "zsh" "ranger" "tmux")
-_installSoftware_apt=("bat" "btop" "wget" "curl" "kitty" "thefuck" "lsd" "neofetch" "neovim" "vim" "zsh" "ranger" "tmux")
+_installSoftware_emerge=("bat" "btop" "kitty" "thefuck" "lsd" "curl" "neofetch" "neovim" "vim" "zsh" "ranger" "tmux")
+_installSoftware_apt=("bat" "btop" "kitty" "curl" "thefuck" "lsd" "neofetch" "neovim" "vim" "zsh" "ranger" "tmux")
+_moveSoftware=("bat" "btop" "kitty" "thefuck" "lsd" "neofetch" "nim" "vim" "zsh" "ranger" "tmux")
 
 
 # Get the OS 
@@ -193,7 +195,7 @@ _pullGitrepository(){
     exit 0
 }
 
-
+# implement check for wget 
 _checkFundamentalSoftware(){
     if ! which git &> /dev/null ; then
         echo "Please install git"
