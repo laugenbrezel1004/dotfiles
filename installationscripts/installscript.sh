@@ -118,9 +118,9 @@ _pullGitrepository(){
 		  sudo mv -f dotfiles/{bat, btop, kitty, lsd, neofetch, nvim, ranger, qimgv, ranger, starship, thefuck, tmux, zsh} $USER/.config/
 	else    
 		  # rm -rf /home/$USER/{.aliases,.tmux.conf,.vimrc,.zshrc}
-      sudo mkdir $USER/.config.backup
-      sudo mv -f $USER/.config/{bat,btop,kitty,lsd,neofetch,ranger,nvim} $USER/.config.backup
-		  sudo mv -f dotfiles/{bat, btop, kitty, lsd, neofetch, nvim, ranger, qimgv, ranger, starship, thefuck, tmux, zsh} $USER/.config/
+      mkdir $USER/.config.backup
+      mv -f $USER/.config/{bat,btop,kitty,lsd,neofetch,ranger,nvim} $USER/.config.backup
+		  mv -f dotfiles/{bat, btop, kitty, lsd, neofetch, nvim, ranger, qimgv, ranger, starship, thefuck, tmux, zsh} $USER/.config/
 	fi
 
     echo 
