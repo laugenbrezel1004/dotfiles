@@ -1,17 +1,16 @@
 #!/usr/bin/sh
 #TODO
-# install not everything with root in the users home dir xD.
-#zsh plugin, nvim plugin
 # Abort at error
 set -e
+
 # Set global variables
 _os=""
 _setupFor=""
 _installer=""
 _installSoftware_emerge=("bat" "btop" "wget" "curl" "kitty" "thefuck" "lsd" "neofetch" "neovim" "vim" "zsh" "ranger" "tmux")
 _installSoftware_apt=("bat" "btop" "wget" "curl" "kitty" "thefuck" "lsd" "neofetch" "neovim" "vim" "zsh" "ranger" "tmux")
-# installHyprlandSoftware=("mpv" "pulse" "swaync" "waybar" "wofi" "cava")
-# installHyprland=false
+
+
 # Get the OS 
 _identify_os() {
 	
@@ -178,8 +177,11 @@ _pullGitrepository(){
     git clone https://github.com/laugenbrezel1004/dotfiles.git
 
     echo "Installing new config files"
+
     #mv dotfiles to config
-    mv dotfiles/* $HOME/.config/ 
+    for software in "${_installSoftware_apt[@]}"; do
+      mv $software $HOME/.config/
+    done
 
     # and create sym links for fiels
     ln -s $HOME/.config/zsh/.zshrc $HOME/.zshrc
