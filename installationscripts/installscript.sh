@@ -104,26 +104,26 @@ _installsoftware(){
 
 _pullGitrepository(){
     echo "Backuping up .config direcotry"
-    mkdir $USER/.config.backup
+    mkdir $HOME/.config.backup
 
     sleep 3
     echo "Pulling down the git repository"
     git clone https://github.com/laugenbrezel1004/dotfiles.git
     echo "Installing new config files"
 
-    mv -f dotfiles/{bat, btop, kitty, lsd, neofetch, nvim, ranger, qimgv, ranger, starship, thefuck, tmux, zsh} $USER/.config.backup
+    mv -f dotfiles/{bat, btop, kitty, lsd, neofetch, nvim, ranger, qimgv, ranger, starship, thefuck, tmux, zsh} $HOME/.config.backup
 
-    if [ -d $USER/.aliases]; then
-      sudo mv $USER/.aliases $USER/.config.backup/
+    if [ -d $HOME/.aliases]; then
+      sudo mv $HOME/.aliases $HOME/.config.backup/
     fi
-    if [ -d $USER/.tmux.conf]; then
-      sudo mv $USER/.tmux.conf $USER/.config.backup/
+    if [ -d $HOME/.tmux.conf]; then
+      sudo mv $HOME/.tmux.conf $HOME/.config.backup/
     fi
-    if [ -d $USER/.vimrc]; then
-      sudo mv $USER/.vimrc $USER/.config.backup/
+    if [ -d $HOME/.vimrc]; then
+      sudo mv $HOME/.vimrc $HOME/.config.backup/
     fi
-    if [ -d $USER/.zshrc]; then
-      sudo mv $USER/.zshrc $USER/.config.backup/
+    if [ -d $HOME/.zshrc]; then
+      sudo mv $HOME/.zshrc $HOME/.config.backup/
     fi
 
     source ~/.zshrc
