@@ -104,7 +104,9 @@ _installsoftware(){
 
 _pullGitrepository(){
     echo "Backuping up .config direcotry"
-    mkdir $HOME/.config.backup
+    if [ -d "$HOME/.config.backup"]; then
+      mkdir $HOME/.config.backup
+    fi
 
     sleep 3
     echo "Pulling down the git repository"
@@ -113,51 +115,51 @@ _pullGitrepository(){
 
   if [ -d "$HOME/.config/dotfiles/bat" ]; then
     mv -f "$HOME/.config/dotfiles/bat" "$HOME/.config.backup"
-fi
+  fi
 
-if [ -d "$HOME/.config/dotfiles/btop" ]; then
-    mv -f "$HOME/.config/dotfiles/btop" "$HOME/.config.backup"
-fi
+  if [ -d "$HOME/.config/dotfiles/btop" ]; then
+      mv -f "$HOME/.config/dotfiles/btop" "$HOME/.config.backup"
+  fi
 
-if [ -d "$HOME/.config/dotfiles/kitty" ]; then
-    mv -f "$HOME/.config/dotfiles/kitty" "$HOME/.config.backup"
-fi
+  if [ -d "$HOME/.config/dotfiles/kitty" ]; then
+      mv -f "$HOME/.config/dotfiles/kitty" "$HOME/.config.backup"
+  fi
 
-if [ -d "$HOME/.config/dotfiles/lsd" ]; then
-    mv -f "$HOME/.config/dotfiles/lsd" "$HOME/.config.backup"
-fi
+  if [ -d "$HOME/.config/dotfiles/lsd" ]; then
+      mv -f "$HOME/.config/dotfiles/lsd" "$HOME/.config.backup"
+  fi
 
-if [ -d "$HOME/.config/dotfiles/neofetch" ]; then
-    mv -f "$HOME/.config/dotfiles/neofetch" "$HOME/.config.backup"
-fi
+  if [ -d "$HOME/.config/dotfiles/neofetch" ]; then
+      mv -f "$HOME/.config/dotfiles/neofetch" "$HOME/.config.backup"
+  fi
 
-if [ -d "$HOME/.config/dotfiles/nvim" ]; then
-    mv -f "$HOME/.config/dotfiles/nvim" "$HOME/.config.backup"
-fi
+  if [ -d "$HOME/.config/dotfiles/nvim" ]; then
+      mv -f "$HOME/.config/dotfiles/nvim" "$HOME/.config.backup"
+  fi
 
-if [ -d "$HOME/.config/dotfiles/ranger" ]; then
-    mv -f "$HOME/.config/dotfiles/ranger" "$HOME/.config.backup"
-fi
+  if [ -d "$HOME/.config/dotfiles/ranger" ]; then
+      mv -f "$HOME/.config/dotfiles/ranger" "$HOME/.config.backup"
+  fi
 
-if [ -d "$HOME/.config/dotfiles/qimgv" ]; then
-    mv -f "$HOME/.config/dotfiles/qimgv" "$HOME/.config.backup"
-fi
+  if [ -d "$HOME/.config/dotfiles/qimgv" ]; then
+      mv -f "$HOME/.config/dotfiles/qimgv" "$HOME/.config.backup"
+  fi
 
-if [ -d "$HOME/.config/dotfiles/starship" ]; then
-    mv -f "$HOME/.config/dotfiles/starship" "$HOME/.config.backup"
-fi
+  if [ -d "$HOME/.config/dotfiles/starship" ]; then
+      mv -f "$HOME/.config/dotfiles/starship" "$HOME/.config.backup"
+  fi
 
-if [ -d "$HOME/.config/dotfiles/thefuck" ]; then
-    mv -f "$HOME/.config/dotfiles/thefuck" "$HOME/.config.backup"
-fi
+  if [ -d "$HOME/.config/dotfiles/thefuck" ]; then
+      mv -f "$HOME/.config/dotfiles/thefuck" "$HOME/.config.backup"
+  fi
 
-if [ -d "$HOME/.config/dotfiles/tmux" ]; then
-    mv -f "$HOME/.config/dotfiles/tmux" "$HOME/.config.backup"
-fi
+  if [ -d "$HOME/.config/dotfiles/tmux" ]; then
+      mv -f "$HOME/.config/dotfiles/tmux" "$HOME/.config.backup"
+  fi
 
-if [ -d "$HOME/.config/dotfiles/zsh" ]; then
-    mv -f "$HOME/.config/dotfiles/zsh" "$HOME/.config.backup"
-fi
+  if [ -d "$HOME/.config/dotfiles/zsh" ]; then
+      mv -f "$HOME/.config/dotfiles/zsh" "$HOME/.config.backup"
+  fi
     if [ -d $HOME/.aliases]; then
       sudo mv $HOME/.aliases $HOME/.config.backup/
     fi
