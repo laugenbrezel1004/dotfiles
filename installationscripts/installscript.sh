@@ -107,7 +107,69 @@ _pullGitrepository(){
     if [ ! -d "$HOME/.config.backup" ]; then
       mkdir $HOME/.config.backup
     fi
+     
+    #backup old config
     
+  if [ -d "$HOME/.config/bat" ]; then
+    mv -f "$HOME/.config/bat" "$HOME/.config.backup"
+  fi
+
+  if [ -d "$HOME/.config/btop" ]; then
+      mv -f "$HOME/.config/btop" "$HOME/.config.backup"
+  fi
+
+  if [ -d "$HOME/.config/kitty" ]; then
+      mv -f "$HOME/.config/kitty" "$HOME/.config.backup"
+  fi
+
+  if [ -d "$HOME/.config/lsd" ]; then
+      mv -f "$HOME/.config/lsd" "$HOME/.config.backup"
+  fi
+
+  if [ -d "$HOME/.config/neofetch" ]; then
+      mv -f "$HOME/.config/neofetch" "$HOME/.config.backup"
+  fi
+
+  if [ -d "$HOME/.config/nvim" ]; then
+      mv -f "$HOME/.config/nvim" "$HOME/.config.backup"
+  fi
+
+  if [ -d "$HOME/.config/ranger" ]; then
+      mv -f "$HOME/.config/ranger" "$HOME/.config.backup"
+  fi
+
+  if [ -d "$HOME/.config/qimgv" ]; then
+      mv -f "$HOME/.config/qimgv" "$HOME/.config.backup"
+  fi
+
+  if [ -d "$HOME/.config/starship" ]; then
+      mv -f "$HOME/.config/starship" "$HOME/.config.backup"
+  fi
+
+  if [ -d "$HOME/.config/thefuck" ]; then
+      mv -f "$HOME/.config/thefuck" "$HOME/.config.backup"
+  fi
+
+  if [ -d "$HOME/.config/tmux" ]; then
+      mv -f "$HOME/.config/tmux" "$HOME/.config.backup"
+  fi
+
+  if [ -d "$HOME/.config/zsh" ]; then
+      mv -f "$HOME/.config/zsh" "$HOME/.config.backup"
+  fi
+    if [ -f "$HOME/.aliases" ]; then
+      sudo mv "$HOME/.aliases"  "$HOME/.config.backup/"
+    fi
+    if [ -f "$HOME/.tmux.conf" ]; then
+      sudo mv "$HOME/.tmux.conf" "$HOME/.config.backup/"
+    fi
+    if [ -f "$HOME/.vimrc" ]; then
+      sudo mv "$HOME/.vimrc" "$HOME/.config.backup/"
+    fi
+    if [ -f "$HOME/.zshrc" ]; then
+      sudo mv "$HOME/.zshrc" "$HOME/.config.backup/"
+    fi
+
     if [ -d "$HOME/dotfiles" ]; then
       mv $HOME/dotfiles $HOME/dotfiles.backup
     fi
@@ -116,66 +178,6 @@ _pullGitrepository(){
     echo "Pulling down the git repository"
     git clone https://github.com/laugenbrezel1004/dotfiles.git
     echo "Installing new config files"
-
-  if [ -d "$HOME/.config/dotfiles/bat" ]; then
-    mv -f "$HOME/.config/dotfiles/bat" "$HOME/.config.backup"
-  fi
-
-  if [ -d "$HOME/.config/dotfiles/btop" ]; then
-      mv -f "$HOME/.config/dotfiles/btop" "$HOME/.config.backup"
-  fi
-
-  if [ -d "$HOME/.config/dotfiles/kitty" ]; then
-      mv -f "$HOME/.config/dotfiles/kitty" "$HOME/.config.backup"
-  fi
-
-  if [ -d "$HOME/.config/dotfiles/lsd" ]; then
-      mv -f "$HOME/.config/dotfiles/lsd" "$HOME/.config.backup"
-  fi
-
-  if [ -d "$HOME/.config/dotfiles/neofetch" ]; then
-      mv -f "$HOME/.config/dotfiles/neofetch" "$HOME/.config.backup"
-  fi
-
-  if [ -d "$HOME/.config/dotfiles/nvim" ]; then
-      mv -f "$HOME/.config/dotfiles/nvim" "$HOME/.config.backup"
-  fi
-
-  if [ -d "$HOME/.config/dotfiles/ranger" ]; then
-      mv -f "$HOME/.config/dotfiles/ranger" "$HOME/.config.backup"
-  fi
-
-  if [ -d "$HOME/.config/dotfiles/qimgv" ]; then
-      mv -f "$HOME/.config/dotfiles/qimgv" "$HOME/.config.backup"
-  fi
-
-  if [ -d "$HOME/.config/dotfiles/starship" ]; then
-      mv -f "$HOME/.config/dotfiles/starship" "$HOME/.config.backup"
-  fi
-
-  if [ -d "$HOME/.config/dotfiles/thefuck" ]; then
-      mv -f "$HOME/.config/dotfiles/thefuck" "$HOME/.config.backup"
-  fi
-
-  if [ -d "$HOME/.config/dotfiles/tmux" ]; then
-      mv -f "$HOME/.config/dotfiles/tmux" "$HOME/.config.backup"
-  fi
-
-  if [ -d "$HOME/.config/dotfiles/zsh" ]; then
-      mv -f "$HOME/.config/dotfiles/zsh" "$HOME/.config.backup"
-  fi
-    if [ -d "$HOME/.aliases" ]; then
-      sudo mv "$HOME/.aliases"  "$HOME/.config.backup/"
-    fi
-    if [ -d "$HOME/.tmux.conf" ]; then
-      sudo mv "$HOME/.tmux.conf" "$HOME/.config.backup/"
-    fi
-    if [ -d "$HOME/.vimrc" ]; then
-      sudo mv "$HOME/.vimrc" "$HOME/.config.backup/"
-    fi
-    if [ -d "$HOME/.zshrc" ]; then
-      sudo mv "$HOME/.zshrc" "$HOME/.config.backup/"
-    fi
 
     source ~/.zshrc
     echo "You are all set!!!"
