@@ -104,7 +104,7 @@ _installsoftware(){
 
 _pullGitrepository(){
     echo "Backuping up .config direcotry"
-    if [ -d "$HOME/.config.backup"]; then
+    if [ ! -d "$HOME/.config.backup"]; then
       mkdir $HOME/.config.backup
     fi
 
