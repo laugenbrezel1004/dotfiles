@@ -109,7 +109,6 @@ _pullGitrepository(){
     fi
      
     #backup old config
-      
     if [ -d "$HOME/.config/bat" ]; then
       mv -f "$HOME/.config/bat" "$HOME/.config.backup"
     fi
@@ -177,7 +176,14 @@ _pullGitrepository(){
     sleep 3
     echo "Pulling down the git repository"
     git clone https://github.com/laugenbrezel1004/dotfiles.git
+
     echo "Installing new config files"
+    #mv dotfiles to config
+    mv dotfiles/* $HOME/.config/ 
+
+    # and create sym links for fiels
+    ln -s $HOME/.config/zsh/.zshrc $HOME/.zshrc
+    
 
     source ~/.zshrc
     echo "You are all set!!!"
