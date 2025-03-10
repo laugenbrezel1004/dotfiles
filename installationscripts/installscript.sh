@@ -104,8 +104,12 @@ _installsoftware(){
 
 _pullGitrepository(){
     echo "Backuping up .config direcotry"
-    if [ ! -d "$HOME/.config.backup"]; then
+    if [ ! -d "$HOME/.config.backup" ]; then
       mkdir $HOME/.config.backup
+    fi
+    
+    if [ ! -d "$HOME/dotfiles" ]; then
+      mv $HOME/dotfiles $HOME/dotfiles.backup
     fi
 
     sleep 3
@@ -190,6 +194,7 @@ main() {
 #    currentUser=$(whoami)
 #    if [ "$currentUser" != "root" ]; then
 #
+    cd $HOME
     _checkFundamentalSoftware # check if Fundamental are one the system 
     _identify_os  # Call the function to identify OS
     _pullGitrepository # download the git repo
