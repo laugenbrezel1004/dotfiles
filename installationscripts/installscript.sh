@@ -4,7 +4,6 @@
 #zsh plugin, nvim plugin
 # Abort at error
 set -e
-bash -x
 # Set global variables
 os=""
 setupFor=""
