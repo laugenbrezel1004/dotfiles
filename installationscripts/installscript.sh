@@ -180,7 +180,7 @@ _pullGitrepository(){
 
     #mv dotfiles to config
     for software in "${_installSoftware_apt[@]}"; do
-      mv $software $HOME/.config/
+      mv "dotfiles/$software" "$HOME/.config/"
     done
 
     # and create sym links for fiels
@@ -203,7 +203,7 @@ _checkFundamentalSoftware(){
 main() {
 #    currentUser=$(whoami)
 #    if [ "$currentUser" != "root" ]; then
-#
+    # change working direcotry
     cd $HOME
     _checkFundamentalSoftware # check if Fundamental are one the system 
     _identify_os  # Call the function to identify OS
