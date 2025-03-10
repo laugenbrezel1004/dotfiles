@@ -1,6 +1,7 @@
 #!/usr/bin/sh
 #TODO
 # make script more robust for config and dotfiles local backup
+# make use of more variables in the script
 
 
 
@@ -107,7 +108,7 @@ _installsoftware(){
 
 _pullGitrepository(){
 
-    echo "Backuping up .config direcotry"
+    echo "Backuping up .config direcotry to .config.backup"
     if [ ! -d "$HOME/.config.backup" ]; then
       mkdir $HOME/.config.backup
     fi
@@ -191,10 +192,8 @@ _pullGitrepository(){
     # and create sym links for fiels
     ln -s $HOME/.config/zsh/.zshrc $HOME/.zshrc
     
-
-    source ~/.zshrc
     echo "You are all set!!!"
-    neofetch
+    zsh
     exit 0
 }
 
