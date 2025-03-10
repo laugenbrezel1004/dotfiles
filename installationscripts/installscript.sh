@@ -1,6 +1,9 @@
 #!/usr/bin/sh
 #TODO
-# Abort at error
+# make script more robust for config and dotfiles local backup
+
+
+
 set -e
 
 # Set global variables
@@ -181,7 +184,7 @@ _pullGitrepository(){
     echo "Installing new config files"
 
     #mv dotfiles to config
-    for software in "${_installSoftware_apt[@]}"; do
+    for software in "${_moveSoftware[@]}"; do
       mv "dotfiles/$software" "$HOME/.config/"
     done
 
