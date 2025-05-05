@@ -92,3 +92,7 @@ if command -v nvimpager >/dev/null 2>&1; then
   export PAGER=nvimpager
 fi
 
+
+
+# For the flex
+fastfetch
