@@ -12,9 +12,10 @@ M.base46 = {
 	-- 	["@comment"] = { italic = true },
 	-- },
 }
-M.ui = {
-  relativenumber = true,
-}
+vim.opt.relativenumber = true
+-- M.ui = {
+--   relativenumber = true,
+-- }
 -- M.nvdash = { load_on_startup = true }
 -- M.ui = {
 --       tabufline = {
