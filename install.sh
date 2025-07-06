@@ -6,7 +6,7 @@ set -x
 
 ## packages
 
-__apt_packages = (bat fastfetch kitty lsd nvim vim tmux zsh git)
+__apt_packages=(bat fastfetch kitty lsd nvim vim tmux zsh git)
 
 
 
@@ -21,8 +21,8 @@ if [ ! $UID -eq 0 ]; then
 fi
 
 
-apt update -y &&
+apt update -y 
 
-for package in "$packages[@]"; do
+for package in "${__apt_packages[@]}"; do
   apt install "$package"
 done
