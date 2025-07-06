@@ -1,0 +1,17 @@
+# ~/.config/lsd/config.yaml
+
+color:
+  when: auto        # auto, always, never
+  theme: custom     # default, custom
+
+icon:
+  when: always      # always, auto, never
+  theme: fancy      # fancy, unicode, ascii
+
+date: "+%d.%m.%Y %H:%M"
+permission: rwx
+sorting:
+  column: name      # name, size, time, extension
+  reverse: false
+  dir-grouping: first # first, last, none
+

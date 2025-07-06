@@ -123,7 +123,7 @@ setopt autocd                 # Change to directories by typing their path.
 setopt globdots               # Include dotfiles in globbing.
 setopt extendedglob           # Enable advanced globbing patterns.
 setopt notify                 # Report status of background jobs immediately.
-setopt command_time           # Show execution time for long-running commands (via plugin).
+#setopt command_time           # Show execution time for long-running commands (via plugin).
 
 # --- Completion Styling ---
 # Customize tab completion for better usability.
@@ -135,10 +135,9 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza --color=always $realpat
 
 # --- Shell Integrations ---
 # Initialize fzf for fuzzy searching (files, history, etc.).
-if [[ -x "$(command -v fzf)" ]]; then
-  source <(fzf --zsh)
+# if [[ -x "$(command -v fzf)" ]]; then
   export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border' # Customize fzf appearance.
-fi
+# fi
 # Initialize zoxide for smart directory navigation, overriding cd.
 #if [[ -x "$(command -v zoxide)" ]]; then
 #  eval "$(zoxide init zsh --cmd cd)"
@@ -151,33 +150,16 @@ fi
 
 # --- Pager Settings ---
 # Use nvimpager or bat for man pages, falling back to less.
-if command -v bat >/dev/null 2>&1; then
-  export MANPAGER="sh -c 'col -bx | bat -l man -p'"
-elif command -v nvimpager >/dev/null 2>&1; then
+# if command -v bat >/dev/null 2>&1; then
+#   export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+# elif command -v nvimpager >/dev/null 2>&1; then
   export MANPAGER='nvimpager'
   export PAGER='nvimpager'
-else
-  export MANPAGER='less'
-  export PAGER='less'
-fi
+# else
+#   export MANPAGER='less'
+#   export PAGER='less'
+# fi
 
-# --- Tool-Specific Configurations ---
-# Use eza instead of ls for enhanced visuals (alternative to lsd).
-# if command -v eza >/dev/null 2>&1; then
-#   alias ls='eza --icons'
-#   alias ll='eza -la --icons'
-#   alias tree='eza --tree --icons'
-if command -v lsd >/dev/null 2>&1; then
-  alias ls='lsd'
-  alias ll='lsd -la'
-  alias tree='lsd --tree'
-fi
-# Tmux aliases for quick session management.
-if command -v tmux >/dev/null 2>&1; then
-  alias t='tmux'
-  alias ta='tmux attach || tmux new'
-  alias tk='tmux kill-session'
-fi
 
 # Set Neovim as default editor.
 export EDITOR='nvim'
@@ -193,6 +175,7 @@ fi
 if [[ -x "$(command -v fzf)" ]]; then
   export FZF_CTRL_T_COMMAND='fd --type f --hidden --follow --exclude .git'
   export FZF_ALT_C_COMMAND='fd --type d --hidden --follow --exclude .git'
+  source <(fzf --zsh)
 fi
 
 # --- Taskwarrior Integration ---
@@ -220,3 +203,4 @@ fi
 if command -v tmux >/dev/null 2>&1 && [[ -z "$TMUX" && -z "$VSCODE_GIT_ASKPASS_NODE" ]]; then
   tmux attach-session -t default || tmux new-session -s default
 fi
+source <(fzf --zsh)
