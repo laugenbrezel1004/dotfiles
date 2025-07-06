@@ -6,7 +6,7 @@ set -x
 
 ## packages
 
-__apt_packages=(bat kitty lsd neovimvim vim tmux zsh git)
+__apt_packages=(bat kitty lsd neovim vim tmux zsh git)
 
 
 
