@@ -6,7 +6,7 @@ set -x
 
 ## packages
 
-__apt_packages=(bat fastfetch kitty lsd nvim vim tmux zsh git)
+__apt_packages=(bat kitty lsd nvim vim tmux zsh git)
 
 
 
