@@ -1,5 +1,4 @@
-cd ${0:A:h}
-source .aliases
+source ~/.aliases
 eval "$(starship init zsh)"
 
 

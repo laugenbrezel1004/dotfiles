@@ -1,0 +1,9 @@
+fzf
+neovim
+fd
+ripgrep
+ncdu
+exa
+lsd
+tldr
+batcat
