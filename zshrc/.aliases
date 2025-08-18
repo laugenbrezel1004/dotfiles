@@ -1,4 +1,5 @@
 alias :q="exit"
+alias cat="bat"
 alias d="doas "
 alias please="sudo"
 alias goodbye="shutdown -h now"
