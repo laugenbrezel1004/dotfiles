@@ -17,7 +17,7 @@ yay -Syu
 
 # installed deps
 
-yay -S fzf neovim fd ripgrep ncdu lsd tldr batcat starship hyprpaper wofi tmux zsh waybar stow
+yay -S fzf neovim fd ripgrep ncdu lsd tldr batcat starship hyprpaper wofi tmux zsh waybar stow hyprlock hypridle hyprshot hyprsunset
 
 for dir in */; do
   if [[ ! -f "${dir}" ]]; then
