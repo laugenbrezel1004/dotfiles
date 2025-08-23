@@ -22,6 +22,9 @@ $python\
 [](fg:teal bg:blue)\
 $docker_context\
 [](fg:blue bg:purple)\
+$jobs\
+$cmd_duration\
+$battery\
 $time\
 [ ](fg:purple)\
 $line_break$character"""
@@ -93,6 +96,8 @@ Debian = "󰣚"
 Redhat = "󱄛"
 RedHatEnterprise = "󱄛"
 
+
+
 [username]
 show_always = true
 style_user = "bg:surface0 fg:text"
@@ -113,7 +118,7 @@ truncation_symbol = "…/"
 "Developer" = "󰲋 "
 
 [git_branch]
-symbol = ""
+symbol = ' '
 style = "bg:teal"
 format = '[[ $symbol $branch ](fg:base bg:green)]($style)'
 
@@ -121,55 +126,50 @@ format = '[[ $symbol $branch ](fg:base bg:green)]($style)'
 style = "bg:teal"
 format = '[[($all_status$ahead_behind )](fg:base bg:green)]($style)'
 
+[lua]
+symbol = ' '
+
 [nodejs]
-symbol = ""
-style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
-
-[c]
-symbol = " "
-style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
-
-[rust]
-symbol = ""
-style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
+style = 'blue'
+symbol = ' '
 
 [golang]
-symbol = ""
-style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
-
-[php]
-symbol = ""
-style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
-
-[java]
-symbol = " "
-style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
-
-[kotlin]
-symbol = ""
-style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
+style = 'blue'
+symbol = ' '
 
 [haskell]
-symbol = ""
-style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
+style = 'blue'
+symbol = ' '
 
-[python]
-symbol = ""
-style = "bg:teal"
-format = '[[ $symbol( $version) ](fg:base bg:teal)]($style)'
+[rust]
+style = 'orange'
+symbol = ' '
+
+[ruby]
+style = 'blue'
+symbol = ' '
+
+[package]
+symbol = '󰏗 '
+
+[aws]
+symbol = ' '
+style = 'yellow'
+format = '[$symbol($profile )(\[$duration\] )]($style)'
 
 [docker_context]
-symbol = ""
-style = "bg:mantle"
-format = '[[ $symbol( $context) ](fg:#83a598 bg:color_bg3)]($style)'
+symbol = ' '
+style = 'fg:#06969A'
+format = '[$symbol]($style) $path'
+detect_files = ['docker-compose.yml', 'docker-compose.yaml', 'Dockerfile']
+detect_extensions = ['Dockerfile']
+
+[jobs]
+symbol = ' '
+# style = 'red'
+style = "bg:purple red"
+number_threshold = 1
+format = '[$symbol]($style)'
 
 [time]
 disabled = false
@@ -180,6 +180,11 @@ format = '[[  $time ](fg:mantle bg:purple)]($style)'
 [line_break]
 disabled = false
 
+[cmd_duration]
+min_time = 500
+style = 'fg:gray'
+format = '[$duration]($style)'
+
 [character]
 disabled = false
 success_symbol = '[](bold fg:green)'
@@ -188,3 +193,14 @@ vimcmd_symbol = '[](bold fg:creen)'
 vimcmd_replace_one_symbol = '[](bold fg:purple)'
 vimcmd_replace_symbol = '[](bold fg:purple)'
 vimcmd_visual_symbol = '[](bold fg:lavender)'
+
+# ~/.config/starship.toml
+
+[battery]
+full_symbol = '🔋 '
+charging_symbol = '⚡️ '
+discharging_symbol = '💀 '
+ 
+[[battery.display]]
+threshold = 10
+style = 'bold red'
