@@ -73,7 +73,7 @@ install_packages() {
         "fzf" "neovim" "fd" "ripgrep" "ncdu" "lsd" "tldr" "bat"
         "starship" "hyprpaper" "wofi" "tmux" "zsh" "waybar" "stow"
         "hyprlock" "hypridle" "hyprshot" "hyprsunset" "unzip"
-        "qt6-svg" "qt6-declarative" "qt5-quickcontrols2"
+        "qt6-svg" "qt6-declarative" "qt5-quickcontrols2" "dialog"
     )
     
     print_status "Installing packages..."
