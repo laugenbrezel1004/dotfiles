@@ -108,6 +108,7 @@ format = '[ $user ]($style)'
 style = "fg:mantle bg:peach"
 format = "[ $path ]($style)"
 truncation_length = 3
+home_symbol = ''
 truncation_symbol = "…/"
 
 [directory.substitutions]
@@ -115,7 +116,7 @@ truncation_symbol = "…/"
 "Downloads" = " "
 "Music" = "󰝚 "
 "Pictures" = " "
-"Developer" = "󰲋 "
+"Projects" = "󰲋 "
 
 [git_branch]
 symbol = ' '
@@ -132,6 +133,10 @@ symbol = ' '
 [nodejs]
 style = 'blue'
 symbol = ' '
+
+
+[bun]
+format = 'via [🍔 $version](bold green) '
 
 [golang]
 style = 'blue'
@@ -182,13 +187,12 @@ disabled = false
 
 [cmd_duration]
 min_time = 500
-style = 'fg:gray'
-format = '[$duration]($style)'
+format = '[underwent ](fg:black bg:purple)[$duration](bold yellow bg:purple)'
 
 [character]
 disabled = false
 success_symbol = '[](bold fg:green)'
-error_symbol = '[](bold fg:red)'
+error_symbol = '[✗](bold fg:red) '
 vimcmd_symbol = '[](bold fg:creen)'
 vimcmd_replace_one_symbol = '[](bold fg:purple)'
 vimcmd_replace_symbol = '[](bold fg:purple)'
@@ -200,7 +204,14 @@ vimcmd_visual_symbol = '[](bold fg:lavender)'
 full_symbol = '🔋 '
 charging_symbol = '⚡️ '
 discharging_symbol = '💀 '
- 
-[[battery.display]]
-threshold = 10
+
+[[battery.display]] # 'bold red' style and discharging_symbol when capacity is between 0% and 10%
+threshold = 20
 style = 'bold red'
+
+[[battery.display]] # 'bold yellow' style and 💦 symbol when capacity is between 10% and 30%
+threshold = 40
+style = 'bold yellow'
+discharging_symbol = '💦 '
+
+# when capacity is over 30%, the battery indicator will not be displayed
