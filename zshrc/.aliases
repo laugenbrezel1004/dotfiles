@@ -1,4 +1,6 @@
 alias :q="exit"
+alias rm="trashcan"
+
 alias cat="bat"
 alias d="doas "
 alias please="sudo"
