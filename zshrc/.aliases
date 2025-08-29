@@ -1,9 +1,8 @@
 alias :q="exit"
+alias please="sudo "
 alias rm="trashcan"
-
 alias cat="bat"
 alias d="doas "
-alias please="sudo"
 alias goodbye="shutdown -h now"
 alias how="tldr"
 alias .='cd'

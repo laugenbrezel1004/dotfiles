@@ -1,8 +1,0 @@
-[LOG] Welcome to hyprpaper!
-built from commit  ()
-[LOG] Cleaned old hyprpaper preloads (2), removing 28.1MB
-Error in config: 
-Config error in file /home/laurenz/dotfiles/hyprpaper/.config/hypr/hyprpaper.conf at line 2: no such file: /home/laurenz/.config/backgrounds/*
-[WARN] Monitor HDMI-A-1 does not have a target! A wallpaper will not be created.
-[WARN] Monitor HDMI-A-2 does not have a target! A wallpaper will not be created.
-[LOG] hyprpaper socket started at /run/user/1000/hypr/4e242d086e20b32951fdc0ebcbfb4d41b5be8dcc_1755775787_1723288122/.hyprpaper.sock (fd: 4)
