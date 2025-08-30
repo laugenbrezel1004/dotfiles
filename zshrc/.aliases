@@ -1,3 +1,4 @@
+export PAGER=nvimpager
 alias :q="exit"
 alias please="sudo "
 alias rm="trashcan"
